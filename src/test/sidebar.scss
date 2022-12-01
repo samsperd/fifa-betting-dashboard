@@ -1,0 +1,31 @@
+@import "../../styles/global-variables";
+
+.sidebar {
+    flex: 1;
+    border-right: 0.5 solid #f1f1f1;
+    min-height: 100vh;
+    background-color: rgba(102,105,104,0.9); 
+    background-image: radial-gradient(farthest-side ellipse at 10% 0, rgba(102,105,104,0.9), rgba(93,112,119,0.89), rgba(160,174,150,0.9));
+    
+    .btn {
+        outline: none;
+        padding: 10px;
+        margin: 10px;
+        width: max-content;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 5px;
+        background-size: 200% auto;
+        transition: 0.5s;
+        box-shadow: 0 0 20px #eee;
+        background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+        border: none;
+
+
+        &:hover {
+            background-position: right center;
+        }
+    }
+
+
+}

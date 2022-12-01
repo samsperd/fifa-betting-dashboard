@@ -1,0 +1,28 @@
+@import "../../styles/global-variables";
+
+.navbar {
+    height: 60px;
+    // box-shadow: 0 0 5px #eee;
+    background: white;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: gray;
+
+    .wrapper {
+        display: flex;
+        width: 100%;
+        // border: 1px solid #000;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-between;
+
+        .tabs {
+            display: flex;
+            gap: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgb(197, 194, 194);
+        }
+    }
+}
