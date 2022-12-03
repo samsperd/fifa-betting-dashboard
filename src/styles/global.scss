@@ -1,18 +1,21 @@
 .App {
   display: flex;
   width: 100%;
-  background: #f9f9f9;
+  background: rgb(250, 250, 250);
 
   .AppContainer {
-    flex: 4.5;
+    flex: 4;
 
     .main {
-      padding: 10px;
+      padding: 20px;
     }
 
 
     
   }
 
+  a {
+    text-decoration: none;
+  }
 
 }

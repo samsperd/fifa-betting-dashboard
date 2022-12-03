@@ -20,9 +20,50 @@
         .tabs {
             display: flex;
             gap: 20px;
-            font-size: 16px;
-            font-weight: 700;
-            color: rgb(197, 194, 194);
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(209, 208, 208);
+            align-items: center;
+
+            .tab {
+                // padding: 5px 20px;
+                // border: 1px solid #000;
+                width: 110px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                gap: 5px;
+                transition: 700ms;
+
+                small {
+                    font-weight: 600;
+                    font-size: 12px;
+                    color: rgb(138, 138, 138);
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                hr {
+                    width: 100%;
+                    background-color: #8a1538;
+                    height: 4px;
+                    border-radius: 6px;
+                    display: none;
+                    transition: display 700ms linear;
+
+                }
+                
+                &:hover {
+                    hr {
+                        display: block;
+                    }
+
+                    
+                }
+
+            }
         }
     }
 }

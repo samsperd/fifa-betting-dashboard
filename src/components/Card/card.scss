@@ -1,0 +1,144 @@
+@import "../../styles/_global-variables.scss";
+
+.card {
+    background: white;
+    padding: 10px;
+    // width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #eee;
+
+
+    .cardTitle {
+        display: flex;
+        border-bottom: 1px solid #f1f1f1;
+        padding: 10px 5px;
+        justify-content: space-between;
+        align-items: center;
+        
+        .cardTitleLive {
+            background-color: rgba($color: red, $alpha: 0.2);
+            font-size: 13px;
+            display: flex;
+            color: red;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .cardTitleText {
+            font-weight: 600;
+        }
+        
+        .cardTitleIcons {
+            display: flex;
+            gap: 10px;
+            // padding: 5px 10px;
+            
+            .icon {
+                font-size: 22px;
+                color: rgba($color: gray, $alpha: 0.5);
+
+            }
+
+        }
+    }
+
+    .cardBody {
+        display: grid;
+        padding: 14px 10px;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        // justify-content: space-around;
+
+
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            font-size: 17px;
+            font-weight: 600;
+
+            .teamLogo {
+                width: 100px;
+                display: grid;
+                place-items: center;
+                height: 100px;
+                border: 10px solid #f8f7f7;
+                border-radius: 50%;
+            }
+        }
+
+        .matchStats {
+            // width: 100px;
+            display: grid;
+            place-items: center;
+            padding: 10px;
+            // height: 150px;
+            gap: 15px;
+            
+            h1 {
+                font-weight: 600;
+                color: rgb(104, 104, 104);
+            }
+
+            .matchInfo {
+                font-size: 12px;
+                font-weight: 600;
+                color: rgba($color: gray, $alpha: 0.5);
+
+                span {
+                    color: gray;
+                    font-weight: bold;
+                }
+
+            }
+            
+            .oddsButtons {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+
+                button {
+                    outline: none;
+                    border: none;
+                    font-size: 12px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    background-color: rgba($color: gray, $alpha: 0.2);
+                    color: gray;
+                    border-radius: 5px;
+                    padding: 5px 7px;
+                }
+            }
+        }
+    }
+
+    .cardActions {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -25px;
+
+        button {
+            outline: none;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: #550065;
+            // background-color: rgb(85, 0, 101);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 8px 41px;
+            box-shadow: 0 0 5px #eee;
+
+            &:hover {
+                background-color: goldenrod;
+            }
+
+        }
+    }
+}

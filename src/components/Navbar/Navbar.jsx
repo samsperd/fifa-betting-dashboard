@@ -5,15 +5,34 @@ const Navbar = () => {
   return (
     <div className='navbar'>
         <div className="wrapper">
+
+            <div className="wrapperGreeting">
+                <h3>
+                    Welcome back, Sammy!
+                </h3>
+            </div>
+
             <div className="tabs">
-                <div className="search">
+                <div className="tab">
                     Today
+                    <small>
+                        29th, Oct 2022
+                    </small>
+                    <hr />
                 </div>
-                <div className="search">
+                <div className="tab">
                     Yesterday
+                    <small>
+                        29th, Oct 2022
+                    </small>
+                    <hr />
                 </div>
-                <div className="search">
+                <div className="tab">
                     Tomorrow
+                    <small>
+                        29th, Oct 2022
+                    </small>
+                    <hr />
                 </div>
             </div>
             <div className="personal">

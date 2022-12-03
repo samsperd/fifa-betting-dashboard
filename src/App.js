@@ -18,7 +18,6 @@ function App() {
               <Route index element={<Profile />}></Route>
             </Route>
           </Routes>
-          Main
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { AccountCircle, BarChart, Dashboard, Newspaper, Receipt, SportsSoccer, Subscriptions } from '@mui/icons-material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./sidebar.scss"
 
 const Sidebar = () => {
@@ -21,31 +22,45 @@ const Sidebar = () => {
             Main
           </p>
           <div className="listItems">
-            <li>
-              <Dashboard className='icon' />
-              <span>
-                Dashboard
-              </span>
-            </li>
+            <Link to={'/'}>
+              <li>
+                <Dashboard className='icon' />
+                <span>
+                  Dashboard
+                </span>
+              </li>
 
-            <li>
-              <BarChart className='icon' />
-              <span>
-                Statistics
-              </span>
-            </li>
+            </Link>
+
+            <Link to={'/'}>
+              <li>
+                <BarChart className='icon' />
+                <span>
+                  Statistics
+                </span>
+              </li>
+
+
+            </Link>
+
+
+            <Link to={'/'}>
             <li>
               <Subscriptions className='icon' />
               <span>
                 Highlights
               </span>
             </li>
+            </Link>
+
+            <Link to={'/news'}>
             <li>
               <Newspaper className='icon' />
               <span>
                 News
               </span>
             </li>
+            </Link>
 
           </div>
 
@@ -53,19 +68,23 @@ const Sidebar = () => {
             Account
           </p>
           <div className="listItems">
-            <li>
-              <Receipt className='icon' />
-              <span>
-                Transactions
-              </span>
-            </li>
+          <Link to={'/'}>
+              <li>
+                <Receipt className='icon' />
+                <span>
+                  Transactions
+                </span>
+              </li>
+            </Link>
 
-            <li>
-              <AccountCircle className='icon' />
-              <span>
-                Profile
-              </span>
-            </li>
+            <Link to={'/'}>
+              <li>
+                <AccountCircle className='icon' />
+                <span>
+                  Profile
+                </span>
+              </li>
+            </Link>
           </div>
         </ul>
       </div>

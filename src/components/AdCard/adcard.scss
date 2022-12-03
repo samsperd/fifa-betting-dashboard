@@ -1,0 +1,49 @@
+.adcard {
+    display: flex;
+    background-image: linear-gradient(to right, #550065 0%, rgb(255, 231, 92) 51%, #550065 100%);
+    background-size: 120% auto;
+    color: white;
+    height: 130px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    justify-content: space-between;
+    animation: bg-animation 2s infinite alternate;
+
+    @keyframes bg-animation {
+        0% {
+            background-position: center left;
+        }
+
+        100% {
+            background-position: center center;
+        }
+    }
+
+    .adText {
+        // border: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .adImage {
+        // border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .image {
+            width: 150px;
+            height: 130px;
+            object-fit: cover;
+            // border: 1px solid #000;
+        }
+    }
+
+    // &:hover {
+    //     background-position: center left;
+    // }
+}
+// background-image: linear-gradient(to right, #550065 0%, #b534cf 51%, #550065 100%);
