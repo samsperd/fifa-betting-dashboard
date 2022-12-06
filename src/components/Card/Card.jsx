@@ -1,4 +1,4 @@
-import { CircleOutlined, StarOutlineOutlined } from '@mui/icons-material'
+import { CircleOutlined, FiberManualRecord, StarOutlineOutlined } from '@mui/icons-material'
 import { Divider } from '@mui/material'
 import React from 'react'
 import "./card.scss"
@@ -8,6 +8,7 @@ const Card = () => {
     <div className='card'>
         <div className="cardTitle">
             <span className='cardTitleLive'>
+                <FiberManualRecord className='icon' />
                 Live
             </span>
 

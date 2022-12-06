@@ -1,6 +1,6 @@
 import { AccountCircle, BarChart, Dashboard, Newspaper, Receipt, SportsSoccer, Subscriptions } from '@mui/icons-material'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import "./sidebar.scss"
 
 const Sidebar = () => {
@@ -22,7 +22,7 @@ const Sidebar = () => {
             Main
           </p>
           <div className="listItems">
-            <Link to={'/'}>
+            <NavLink to={'/'} className={({ isActive }) => isActive ? "active" : undefined}>
               <li>
                 <Dashboard className='icon' />
                 <span>
@@ -30,7 +30,7 @@ const Sidebar = () => {
                 </span>
               </li>
 
-            </Link>
+            </NavLink>
 
             <Link to={'/'}>
               <li>
@@ -53,14 +53,14 @@ const Sidebar = () => {
             </li>
             </Link>
 
-            <Link to={'/news'}>
+            <NavLink to={'/news'} className={({ isActive }) => isActive ? "active" : undefined}>
             <li>
               <Newspaper className='icon' />
               <span>
                 News
               </span>
             </li>
-            </Link>
+            </NavLink>
 
           </div>
 

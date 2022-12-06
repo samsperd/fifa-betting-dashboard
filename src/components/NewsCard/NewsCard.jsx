@@ -5,7 +5,7 @@ const NewsCard = () => {
   return (
     <div className='newscard'>
         <div className="newscardTitle">
-                Latest News
+          Matches
         </div>
     </div>
   )

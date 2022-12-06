@@ -1,6 +1,18 @@
 .newscard {
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
     background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #eee;
+    align-items: center;
+
+    .newscardTitle {
+        display: flex;
+        border-bottom: 1px solid #f1f1f1;
+        padding: 10px 5px;
+        justify-content: space-between;
+        align-items: center;        
+        font-weight: 600;
+    }
 }

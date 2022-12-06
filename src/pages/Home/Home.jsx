@@ -1,7 +1,7 @@
 import React from 'react'
 import AdCard from '../../components/AdCard/AdCard'
 import Card from '../../components/Card/Card'
-import NewsCard from '../../components/NewsCard/NewsCard'
+import MatchesCard from '../../components/MatchesCard/MatchesCard'
 import "./home.scss"
 
 const Home = () => {
@@ -12,9 +12,11 @@ const Home = () => {
 
       </div>
       <div className="todayLiveMatches">
+        <MatchesCard />
         <Card />
+        <MatchesCard />
         {/* <NewsCard /> */}
-        <Card />
+        {/* <Card /> */}
       </div>
 
       <div className="todayInfo">

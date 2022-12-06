@@ -1,3 +1,91 @@
-.matchescard {
-    display: grid;
+.matchesCard {
+    // display: grid;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #eee;
+    // place-items: center;
+    // align-items: center;
+    
+    .matchesCardTitle {
+        display: flex;
+        // border-bottom: 1px solid #f1f1f1;
+        padding: 10px 5px;
+        justify-content: space-between;
+        align-items: center;        
+        font-weight: 600;
+    }
+    
+    .matchesCardBody {
+        padding: 10px 5px;
+
+        
+        .matchesCardItem {
+            display: grid;
+            border: 1px solid #f1f1f1;
+            padding: 10px 5px;
+            border-radius: 5px;
+            grid-template-columns: 15% auto 15%;
+            
+            .teamCard {
+                // border: 1px solid #f1f1f1;
+                display: grid;
+                
+                
+                .team {
+                    
+                    display: grid;
+                    grid-template-columns: 20% auto 10%;
+                    font-size: 14px;
+                    
+                    .logoBox{
+                        display: grid;
+                        place-items: center;
+                        
+                        
+                        .logo {
+                            box-shadow: 0 0 10px #eee;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 10px;
+                            object-fit: cover;
+                        }
+                        // border: 1px solid #000;
+                    }
+                    
+                    .teamName {
+                        display: flex;
+                        align-items: center;
+                        // border: 1px solid #000;
+                    }
+                }
+            }
+
+            .status {
+                font-size: 14px;
+            }
+
+            // .secondTeam {
+            //     border: 1px solid #f1f1f1;
+            //     display: grid;
+            //     grid-template-columns: repeat(3, 1fr);
+            //     grid-area: teamtwo;
+            // }
+
+            .chart {
+                display: grid;
+                place-items: center;
+
+                .icon {
+                    color: #e0e0e0;
+                }
+            }
+
+
+            
+        }
+    }
+
 }

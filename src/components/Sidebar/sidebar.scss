@@ -6,6 +6,7 @@
     background: white;
     min-height: 100vh;
     border-end-end-radius: 20px;
+    // box-shadow: 0 0 8px #eee;
 
     .top {
         height: 80px;
@@ -99,16 +100,26 @@
                         border-radius: 10px;
                         background: white;
                         transition: background-color 0.5s linear, color 0.5s linear, transform 0.5s;
-                        box-shadow: 0 0 8px #eee;
+                        // box-shadow: 0 0 8px #eee;
                         cursor: pointer;
                         display: flex;
                         align-items: center;
     
                         &:hover {
-                            background-color: #550065;
+                            background-color: rgba($color: #550065, $alpha: 0.6) ;
                             transform: scale(0.97);
                             // background-position: right left;
                             color: white;
+                        }
+
+
+                    }
+
+                    &.active {
+                        li {
+                            background-color: #550065;
+                            color: white;
+
                         }
                     }
 
