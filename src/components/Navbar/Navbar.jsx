@@ -1,7 +1,7 @@
 import React from 'react'
 import "./navbar.scss"
 import face from '../../assets/images/face-5.jpeg'
-import { MoreVertOutlined, Notifications, SearchOutlined } from '@mui/icons-material'
+import { Notifications, SearchOutlined } from '@mui/icons-material'
 
 const Navbar = () => {
   return (

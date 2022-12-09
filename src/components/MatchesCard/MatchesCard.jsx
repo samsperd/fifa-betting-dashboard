@@ -2,7 +2,6 @@ import { BarChart } from '@mui/icons-material'
 import moment from 'moment'
 import React from 'react'
 import { useGetFootballMatchesQuery } from '../../services/footballApi'
-import FetchedImage from '../FetchedImage/FetchedImage'
 import "./matchescard.scss"
 
 const MatchesCard = () => {
