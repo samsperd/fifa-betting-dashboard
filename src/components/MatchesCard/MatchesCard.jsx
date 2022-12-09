@@ -13,7 +13,6 @@ const MatchesCard = () => {
   }
 
   const matches = data?.events.filter((item) => item.homeTeam?.disabled !== true)
-  // const matches = data?.events
 
   console.log(matches);
 
