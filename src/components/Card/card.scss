@@ -6,6 +6,10 @@
     // width: 550px;
     border-radius: 10px;
     box-shadow: 0 0 10px #eee;
+    
+    @include tablet {
+        padding: 5px;
+    }
 
 
     .cardTitle {
@@ -14,6 +18,10 @@
         padding: 10px 5px;
         justify-content: space-between;
         align-items: center;
+
+        @include tablet {
+            
+        }
         
         .cardTitleLive {
             background-color: rgba($color: red, $alpha: 0.2);
@@ -25,14 +33,22 @@
             font-weight: 600;
             align-items: center;
             
+            @include tablet {
+                font-size: 11px;
+            }
+            
             .icon {
                 font-size: 13px;
                 color: red;
             }
         }
-
+        
         .cardTitleText {
             font-weight: 600;
+
+            @include tablet {
+                font-size: 14px;
+            }
         }
         
         .cardTitleIcons {
@@ -43,7 +59,10 @@
             .icon {
                 font-size: 22px;
                 color: rgba($color: gray, $alpha: 0.5);
-
+                
+                @include tablet {
+                    font-size: 18px;
+                }
             }
 
         }
@@ -55,6 +74,7 @@
         grid-template-columns: repeat(3, 1fr);
         place-items: center;
         // justify-content: space-around;
+        padding: 0 3px;
 
 
 
@@ -68,6 +88,11 @@
             font-size: 17px;
             font-weight: 600;
 
+            @include tablet {
+                font-size: 15px;
+                padding: 2px;
+            }
+
             .teamLogo {
                 width: 100px;
                 display: grid;
@@ -75,6 +100,11 @@
                 height: 100px;
                 border: 10px solid #f8f7f7;
                 border-radius: 50%;
+
+                @include tablet {
+                    width: 70px;
+                    height: 70px;
+                }
             }
         }
 
@@ -89,6 +119,10 @@
             h1 {
                 font-weight: 600;
                 color: rgb(104, 104, 104);
+
+                @include tablet {
+                    font-size: 30px;
+                }
             }
 
             .matchInfo {
@@ -126,6 +160,8 @@
     .cardActions {
         display: flex;
         justify-content: center;
+        align-items: center;
+        margin-top: 5px;
         margin-bottom: -25px;
 
         button {

@@ -1,13 +1,12 @@
 .matchesCard {
-    // display: grid;
     display: flex;
     flex-direction: column;
     background: white;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px #eee;
-    // place-items: center;
-    // align-items: center;
+
+    
     
     .matchesCardTitle {
         display: flex;
@@ -28,6 +27,7 @@
             padding: 10px 5px;
             border-radius: 5px;
             grid-template-columns: 15% auto 15%;
+            // background-color: #550065;
             
             .teamCard {
                 // border: 1px solid #f1f1f1;
@@ -35,29 +35,37 @@
                 
                 
                 .team {
+                    // color: gold;
+                    // color: #550065;
+                    font-weight: 600;
                     
                     display: grid;
-                    grid-template-columns: 20% auto 10%;
+                    grid-template-columns: auto 10%;
                     font-size: 14px;
                     
                     .logoBox{
-                        display: grid;
-                        place-items: center;
+                        display: flex;
+                        // border: 1px solid #000;
+                        justify-content: center;
+                        align-items: center;
                         
                         
-                        .logo {
-                            box-shadow: 0 0 10px #eee;
-                            width: 30px;
-                            height: 30px;
-                            border-radius: 10px;
-                            object-fit: cover;
-                        }
+                        
+                        
+                        // .logo {
+                        //     box-shadow: 0 0 10px #eee;
+                        //     width: 30px;
+                        //     height: 30px;
+                        //     border-radius: 10px;
+                        //     object-fit: cover;
+                        // }
                         // border: 1px solid #000;
                     }
                     
                     .teamName {
                         display: flex;
                         align-items: center;
+                        // justify-content: center;
                         // border: 1px solid #000;
                     }
                 }
@@ -65,6 +73,8 @@
 
             .status {
                 font-size: 14px;
+                // color: #f9f9f9;
+
             }
 
             // .secondTeam {

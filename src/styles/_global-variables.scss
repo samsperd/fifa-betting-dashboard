@@ -1,0 +1,14 @@
+
+$main-color: #5651e5;
+
+
+@mixin tablet {
+    @media screen and (max-width: 800px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}

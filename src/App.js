@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home/Home";
+import News from "./pages/News/News";
 import Profile from "./pages/Profile/Profile";
 import "./styles/global.scss"
 
@@ -15,7 +16,8 @@ function App() {
           <Routes>
             <Route path="/">
               <Route index element={<Home />}></Route>
-              <Route index element={<Profile />}></Route>
+              <Route path="/profile" element={<Profile />}></Route>
+              <Route path="/news" element={<News />}></Route>
             </Route>
           </Routes>
         </div>

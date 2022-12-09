@@ -14,10 +14,6 @@ const Navbar = () => {
                 </h3>
             </div>
 
-            <div className="search">
-                <input type="text" />
-                <SearchOutlined className='icon' />
-            </div>
 
             {/* <div className="tabs">
                 <div className="tab">
@@ -43,6 +39,10 @@ const Navbar = () => {
                 </div>
             </div> */}
             <div className="personal">
+            <div className="search">
+                <input type="text" />
+                <SearchOutlined className='icon' />
+            </div>
                 <div className="profile">
                     {/* <span className="iconSpan">
                         <MoreVertOutlined className='icon' />

@@ -8,6 +8,15 @@
     border-end-end-radius: 20px;
     // box-shadow: 0 0 8px #eee;
 
+    @include tablet {
+        display: none;
+        flex: none;
+    }
+    @include mobile {
+        display: none;
+        flex: none;
+    }
+
     .top {
         height: 80px;
         display: flex;

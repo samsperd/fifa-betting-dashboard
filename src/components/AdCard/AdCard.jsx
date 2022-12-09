@@ -6,7 +6,7 @@ const AdCard = () => {
   return (
     <div className='adcard'>
         <div className="adText">
-            <h4> Make bets Profitably </h4>
+            <b> Make bets Profitably </b>
             <p>
                 Predict in multiple matches and win up to $100,000
             </p>

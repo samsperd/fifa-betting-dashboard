@@ -1,3 +1,5 @@
+@import "../../styles/_global-variables.scss";
+
 .adcard {
     display: flex;
     background-image: linear-gradient(to right, #550065 0%, rgb(255, 231, 92) 51%, #550065 100%);
@@ -9,6 +11,12 @@
     transition: 0.5s;
     justify-content: space-between;
     animation: bg-animation 2s infinite alternate;
+    
+    @include tablet {
+
+        height: 100px;
+        font-size: 14px;
+    }
 
     @keyframes bg-animation {
         0% {
@@ -26,6 +34,11 @@
         flex-direction: column;
         justify-content: center;
         padding: 0 20px;
+
+        // @include tablet {
+
+        //     font-size: 15px;
+        // }
     }
 
     .adImage {
@@ -38,7 +51,12 @@
             width: 150px;
             height: 130px;
             object-fit: cover;
+            
             // border: 1px solid #000;
+        }
+        @include tablet {
+            display: none;
+            
         }
     }
 

@@ -1,19 +1,22 @@
 import { BarChart } from '@mui/icons-material'
+import moment from 'moment'
 import React from 'react'
 import { useGetFootballMatchesQuery } from '../../services/footballApi'
+import FetchedImage from '../FetchedImage/FetchedImage'
 import "./matchescard.scss"
 
 const MatchesCard = () => {
 
-  const { data, isFetching } = useGetFootballMatchesQuery()
+  const { data, isFetching, isError } = useGetFootballMatchesQuery()
 
-  if (isFetching) {
+  if (isFetching || isError) {
     return "Loading..."
   }
 
-  const matches = data?.data
+  const matches = data?.events.filter((item) => item.homeTeam?.disabled !== true)
+  // const matches = data?.events
 
-  console.log(data?.data);
+  console.log(matches);
 
 
   return (
@@ -22,39 +25,36 @@ const MatchesCard = () => {
             Upcoming Matches
         </div>
         <div className="matchesCardBody">
+        {/* <FetchedImage type="team" id="1" className="logo" /> */}
           {
             matches.map((match) => (
-              <>
-                {
-                match?.away_team && (
-
                 <div className="matchesCardItem" key={match?.id}>
                   <div className="status">
-                    10:00
+                    { moment(match?.startTimestamp).format('ddd, hA') }
                   </div>
                   <div className="teamCard">
                     <div className="team">
-                      <span className="logoBox">
-                        <img src={match?.home_team?.logo} className="logo" alt="" />
-                      </span>
+                      {/* <span className="logoBox">
+                          <FetchedImage id={ match?.homeTeam?.id } className="logo" />
+                      </span> */}
                       <span className='teamName'>
-                        { match?.home_team?.name}
+                        { match?.homeTeam?.name}
                       </span>
-                      <span>
+                      {/* <span>
                         0
-                      </span>
+                      </span> */}
                     </div>
 
                     <div className="team">
-                      <span className="logoBox">
-                        <img src={match?.away_team?.logo} className="logo" alt="" />
-                      </span>
+                      {/* <span className="logoBox">
+                        <FetchedImage id={ match?.awayTeam?.id } className="logo" />
+                      </span> */}
                       <span className='teamName'>
-                      { match?.away_team?.name}
+                      { match?.awayTeam?.name}
                       </span>
-                      <span>
+                      {/* <span>
                         0
-                      </span>
+                      </span> */}
                     </div>
 
                   </div>
@@ -63,14 +63,8 @@ const MatchesCard = () => {
                     <BarChart className='icon' />
                   </div>
                 </div>
-                )
-            }
-
-
-              </>
-
-
-          ))
+            
+            ))
           }
 
         </div>

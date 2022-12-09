@@ -1,7 +1,9 @@
 import React from 'react'
 import AdCard from '../../components/AdCard/AdCard'
 import Card from '../../components/Card/Card'
+import LineupCard from '../../components/LineupCard/LineupCard'
 import MatchesCard from '../../components/MatchesCard/MatchesCard'
+import OddsTable from '../../components/OddsTable/OddsTable'
 import "./home.scss"
 
 const Home = () => {
@@ -14,17 +16,19 @@ const Home = () => {
       <div className="todayLiveMatches">
         <MatchesCard />
         <Card />
-        <MatchesCard />
+        <LineupCard />
         {/* <NewsCard /> */}
         {/* <Card /> */}
       </div>
 
       <div className="todayInfo">
 
-        <div className="todayTable"></div>
-        <div className="todayMatches">
+      <OddsTable />
 
-        </div>
+        {/* <div className="todayTable"></div>
+        <div className="todayMatches"> */}
+
+        {/* </div> */}
       </div>
 
 

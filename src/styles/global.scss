@@ -1,3 +1,7 @@
+@import "./global-variables";
+
+
+
 .App {
   display: flex;
   width: 100%;
@@ -5,11 +9,30 @@
   // background: white; // white-bg
   background: rgb(250, 250, 250); // white-bg
 
+  // .sidebar {
+
+  //   @include tablet {
+  //     display: none;
+  //   }
+  // }
+  
   .AppContainer {
     flex: 4;
+    
+    @include tablet {
+      flex: none;
+      width: 100%;
+    }
+    // @include mobile {
+    //   flex: 1;
+    // }
 
     .main {
       padding: 20px;
+
+      @include tablet {
+        padding: 10px;
+      }
     }
 
 
