@@ -1,6 +1,6 @@
+import React from 'react'
 import { BarChart } from '@mui/icons-material'
 import moment from 'moment'
-import React from 'react'
 import { useGetFootballMatchesQuery } from '../../services/footballApi'
 import "./matchescard.scss"
 
