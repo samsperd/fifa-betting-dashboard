@@ -23,7 +23,7 @@ const OddsTable = () => {
         <ul>
             {
                 markets.map((e) => (
-                    <div key={e.id}>
+                    <div key={e.id} style={{ marginTop: '10px' }}>
                         <li>
                             { e.marketName } { e.choiceGroup }
                         </li>
