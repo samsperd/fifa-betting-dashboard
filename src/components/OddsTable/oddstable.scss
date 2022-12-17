@@ -13,7 +13,7 @@
 
       .switchers {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
         margin-bottom: 15px;
       
@@ -28,8 +28,7 @@
                 display: grid;
                 place-items: center;
                 background: #e4e4e4;
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+                // border: 1px solid rgba(0, 0, 0, 0.2);
                     
             }
 
@@ -54,15 +53,15 @@
             label {
             display: grid;
             // width: 100px;
-            background-color: rgba($color: #550065, $alpha: 0.5);
-            color: white;
+            background-color: white;
+            color: #550065;
             font-size: 14px;
             font-weight: normal;
             place-items: center;
             text-shadow: none;
             padding: 6px 14px;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+            // border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 3px #e4e4e4;
             transition: all 0.1s ease-in-out;
 
             
@@ -82,89 +81,7 @@
             //  }
 
         }
-
       }
-
-
-      .s-witchers {
-        display: flex;
-        gap: 20px;
-
-        .switch{
-            display: flex;
-            position: relative;
-            gap: 15px;
-
-            .switch-item{
-                input {
-                    position: absolute !important;
-                    border: 7px solid black;
-                    // clip: rect(0, 0, 0, 0);
-                //     height: 1px;
-                //     width: 1px;
-                //     border: none;
-                //     overflow: hidden;
-    
-    
-                    &:checked + label {
-                        background-color: #550065;
-                        color: gold;
-                        box-shadow: none;
-                    }
-                }
-                
-                label {
-                display: grid;
-                // width: 100px;
-                background-color: rgba($color: #550065, $alpha: 0.5);
-                color: white;
-                font-size: 14px;
-                font-weight: normal;
-                place-items: center;
-                text-shadow: none;
-                padding: 6px 14px;
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-                transition: all 0.1s ease-in-out;
-    
-                
-                &:hover {
-                    cursor: pointer;
-                }
-                }
-
-
-            }
-
-
-            
-
-            
-            //  label:first-of-type {
-            //    border-radius: 4px 0 0 4px;
-            //  }
-            
-            //  label:last-of-type {
-            //    border-radius: 0 4px 4px 0;
-            //  }
-
-        }
-
-
-
-
-
-
-
-
-
-      }
-
-
-
-
-
-
 
     }
 

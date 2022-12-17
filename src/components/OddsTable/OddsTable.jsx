@@ -121,7 +121,7 @@ const OddsTable = () => {
 
                                                 <div className='switch' key={c.sourceId}>
                                                 <div className='switch-header'>
-                                                    { c.name } { b.choiceGroup }
+                                                    { reference(c.name) } { b.choiceGroup }
                                                 </div>
                                                 <div className="switch-item">
                                                 <input
