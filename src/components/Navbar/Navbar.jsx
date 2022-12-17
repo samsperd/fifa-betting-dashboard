@@ -15,38 +15,13 @@ const Navbar = () => {
             </div>
 
 
-            {/* <div className="tabs">
-                <div className="tab">
-                    Today
-                    <small>
-                        29th, Oct 2022
-                    </small>
-                    <hr />
-                </div>
-                <div className="tab">
-                    Yesterday
-                    <small>
-                        29th, Oct 2022
-                    </small>
-                    <hr />
-                </div>
-                <div className="tab">
-                    Tomorrow
-                    <small>
-                        29th, Oct 2022
-                    </small>
-                    <hr />
-                </div>
-            </div> */}
             <div className="personal">
             <div className="search">
                 <input type="text" />
                 <SearchOutlined className='icon' />
             </div>
                 <div className="profile">
-                    {/* <span className="iconSpan">
-                        <MoreVertOutlined className='icon' />
-                    </span> */}
+            
                     <span className="iconSpan">
                         <Notifications className='icon' />
                     </span>
