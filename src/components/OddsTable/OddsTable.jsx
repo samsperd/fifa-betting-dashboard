@@ -94,38 +94,15 @@ const OddsTable = () => {
                             {
                                 a.lists.map((b) => (
 
-                                    <div className='s-witchers'>
-
-                                        {
-                                            b.choices.map((c, i) => (
-                                                <div className='switch'>
-                                                    { reference(c.name) } { b.choiceGroup }
-                                                    <div className="switch-item">
-                                                <input
-                                                    type="radio"
-                                                    id={"switcher" + i}
-                                                    name={"switchToggle"}
-                                                    value={c.sourceId}
-                                                    onChange={toggleState}
-                                                    checked={parseInt(selected) === parseInt(c.sourceId)}
-                                                />
-                                                <label htmlFor="switcher">{ calculateOdds(c.fractionalValue) }</label>
-
-
-                                                </div>
-
-
-                                                </div>
-                                            ))
-                                        }
+                                    <>
 
 
 
 
 
 
-                                    {/* <div className="switchers">
-                                        {
+                                    <div className="switchers">
+                                        {/* {
                                             b.choiceGroup && (
                                                 <div className="switch">
                                                     <div className='switch-header'>
@@ -137,14 +114,14 @@ const OddsTable = () => {
 
                                             )
                                         }
-
+ */}
 
                                         {
                                             b.choices.map((c, i) => (
 
                                                 <div className='switch' key={c.sourceId}>
                                                 <div className='switch-header'>
-                                                    { c.name }
+                                                    { c.name } { b.choiceGroup }
                                                 </div>
                                                 <div className="switch-item">
                                                 <input
@@ -168,9 +145,10 @@ const OddsTable = () => {
                                             ))
                                         }
 
-                                    </div> */}
-
                                     </div>
+
+                                        
+                                    </>
                                 ))
                             }
 
@@ -195,42 +173,3 @@ const OddsTable = () => {
 export default OddsTable
 
 
-
-
-        // <ul>
-        //     {
-        //         markets.map((e) => (
-        //             <div key={e.id} style={{ marginTop: '10px' }}>
-        //                 <li>
-        //                     { e.marketName }
-        //                 </li>
-        //                 <ToggleButtonGroup
-        //                     value={alignment}
-        //                     exclusive
-        //                     onChange={handleAlignment}
-        //                     aria-label="text alignment"
-        //                 >
-
-        //                     {
-        //                         e.choices.map((c) => (
-
-        //                             <div style={{ flexDirection: 'column', width: '100%' }}>
-        //                                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-        //                                     <h4>{ c.name }  { e.choiceGroup } </h4>
-        //                                 </div>
-
-        //                                 <ToggleButton value={ c.sourceId }>
-        //                                             { calculateOdds(c.fractionalValue) }
-
-        //                                 </ToggleButton>
-        //                             </div>
-
-
-                                    
-        //                         ))
-        //                     }
-        //                 </ToggleButtonGroup>
-        //             </div>
-        //         ))
-        //     }
-        // </ul>
