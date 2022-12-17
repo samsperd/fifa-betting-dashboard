@@ -1,0 +1,25 @@
+.geek {
+
+    .container {
+
+        width: 100%;
+        text-align: center;
+        padding-bottom: 50px;
+
+        h1 {
+            margin: 1em 0 2em 0;
+            text-align: center;
+        }
+
+        .pitch {
+
+            margin: 0 auto;
+
+            @media (min-width: 960px) {
+                height: 525px;
+                width: 900px;
+                padding-bottom: unset;
+            }
+        }
+    }
+}

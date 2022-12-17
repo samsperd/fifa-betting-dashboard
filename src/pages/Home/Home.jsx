@@ -13,13 +13,11 @@ const Home = () => {
         <AdCard />
 
       </div>
-      <div className="todayLiveMatches">
+      {/* <div className="todayLiveMatches">
         <MatchesCard />
         <Card />
         <LineupCard />
-        {/* <NewsCard /> */}
-        {/* <Card /> */}
-      </div>
+      </div> */}
 
       <div className="todayInfo">
 

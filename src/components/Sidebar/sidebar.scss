@@ -108,14 +108,17 @@
                         font-size: 16px;
                         border-radius: 10px;
                         background: white;
-                        transition: background-color 0.5s linear, color 0.5s linear, transform 0.5s;
+                        transition: all 0.5s linear;
                         // box-shadow: 0 0 8px #eee;
                         cursor: pointer;
                         display: flex;
                         align-items: center;
+
+                        // -webkit-transition: background 300ms ease-in-out;
+                        // transition: background 300ms ease-in-out;
     
                         &:hover {
-                            background-color: rgba($color: #550065, $alpha: 0.6) ;
+                            background: rgba($color: #550065, $alpha: 0.6) ;
                             transform: scale(0.97);
                             // background-position: right left;
                             color: white;
