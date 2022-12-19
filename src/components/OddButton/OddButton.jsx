@@ -1,3 +1,4 @@
+import { AssistWalker,  DirectionsWalk,   NordicWalking, RunCircle } from '@mui/icons-material';
 import React, { useState } from 'react';
 import './OddsButton.scss'
 
@@ -6,21 +7,17 @@ const OddButton = () => {
 
 
   return (
-    <section>
-          <div className="envelope">
-        <div className="arrow-up"></div>
-        <div className="arrow-down open"></div>
-        <div className="arrow-left"></div>
-        <div className="arrow-right"></div>
-        <div className="paper">
-
+    <div className="oddbutton">
+      Odds button
+      <div className="container">
+        <div className="card">
+          <div className="cover">
+            <div className="coverFront"></div>
+            <div className="coverFront"></div>
+          </div>
         </div>
       </div>
-      <div className="overlay"></div>
-
-
-
-    </section>
+    </div>
     
 
   )

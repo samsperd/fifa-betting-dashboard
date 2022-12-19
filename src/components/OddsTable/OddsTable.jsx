@@ -83,7 +83,7 @@ const OddsTable = () => {
 
   return (
     <div className='oddstable'>
-        {/* <h1> This is Ods table </h1> */}
+        {/* <OddButton /> */}
         {
         markets.map((a) => (
 

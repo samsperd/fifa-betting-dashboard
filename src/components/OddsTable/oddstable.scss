@@ -1,3 +1,5 @@
+@import "../../styles/global-variables";
+
 .oddstable {
 
 
@@ -13,9 +15,13 @@
 
       .switchers {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
         margin-bottom: 15px;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
       
         
         .switch{
@@ -27,20 +33,26 @@
             .switch-header {
                 display: grid;
                 place-items: center;
-                background: #e4e4e4;
+                background: linear-gradient(45deg, rgba(#e4e4e4, 0.5),  transparent);
+                box-shadow: 3px 3px 3px #d4d4d4;
+                // background: #550065;
+                // color: goldenrod;
+                border-radius: 5px;
+                backdrop-filter: blur(5px);
+                font-weight: 500;
                 // border: 1px solid rgba(0, 0, 0, 0.2);
                     
             }
-
+            .switch-item {
+                position: relative;
+            }
 
             input {
                 position: absolute !important;
-                border: 7px solid black;
-                // clip: rect(0, 0, 0, 0);
-            //     height: 1px;
-            //     width: 1px;
-            //     border: none;
-            //     overflow: hidden;
+                height: 100%;
+                width: 100%;
+                z-index: 2;
+                opacity: 0;
 
 
                 &:checked + label {
@@ -52,11 +64,11 @@
             
             label {
             display: grid;
-            // width: 100px;
+            // width: 100px; #550065
             background-color: white;
-            color: #550065;
+            color: black;
             font-size: 14px;
-            font-weight: normal;
+            font-weight: 600;
             place-items: center;
             text-shadow: none;
             padding: 6px 14px;

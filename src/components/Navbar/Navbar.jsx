@@ -1,7 +1,7 @@
 import React from 'react'
 import "./navbar.scss"
 import face from '../../assets/images/face-5.jpeg'
-import { Notifications, SearchOutlined } from '@mui/icons-material'
+import { FiberManualRecord, Notifications, SearchOutlined } from '@mui/icons-material'
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
 
             <div className="wrapperGreeting">
                 <h3>
-                    Welcome back, Sammy!
+                    Welcome back, Obinna!
                 </h3>
             </div>
 
@@ -24,12 +24,16 @@ const Navbar = () => {
             
                     <span className="iconSpan">
                         <Notifications className='icon' />
+                        <sup>
+                            <FiberManualRecord className='icon' />
+
+                        </sup>
                     </span>
                     <span className="imgBox">
                     <img src={face} alt="" className='img' />
                     </span>
                     <span className='dets'>
-                        <h4>First Lastname</h4>
+                        <h4>Obinna Iloeje</h4>
                         <p>$5000</p>
                     </span>
                 </div>

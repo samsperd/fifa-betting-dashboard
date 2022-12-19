@@ -63,8 +63,21 @@
                 .iconSpan {
                     display: grid;
                     place-items: center;
+                    position: relative;
+
                     .icon {
                         color: rgba($color: gray, $alpha: 0.5);
+                    }
+                    
+                    sup {
+                        position: absolute;
+                        right: 0;
+                        top: 7px;
+
+                        .icon {
+                            color: red;
+                            font-size: 10px;
+                        }
                     }
                 }
 
