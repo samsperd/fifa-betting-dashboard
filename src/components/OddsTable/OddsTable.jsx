@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-// import { useGetFootballMatchOddsQuery } from '../../services/footballApi'
-import OddButton from '../OddButton/OddButton'
-// import Geek from '../geek/Geek'
+import { useGetFootballMatchOddsQuery } from '../../services/footballApi'
 import "./oddstable.scss"
 import prod from './prod'
 
@@ -51,16 +49,12 @@ function reference(value) {
 
 const OddsTable = () => {
 
-    // const { data, isFetching, isError } = useGetFootballMatchOddsQuery()
+    const { data, isFetching, isError } = useGetFootballMatchOddsQuery()
     const [toggle, setToggle] = useState(false);
     const [selected, setSelected] = useState(0)
 
 
 	const toggleState = (e) => {
-		// this.setState({
-		// 	toggle: !this.state.toggle
-		// });
-
         setSelected(e.target.value)
         
         console.log(selected);
@@ -68,13 +62,13 @@ const OddsTable = () => {
 	}
     
     
-    // if (isFetching || isError) {
-    //     return "loading..."
-    // }
+    if (isFetching ) {
+        return "loading..."
+    }
 
 
 
-    // const markets = data?.markets
+    // const markets =  groupedObjects(data?.markets)
     const markets = groupedObjects(prod)
     console.log(prod);
     console.log(markets);
@@ -83,43 +77,19 @@ const OddsTable = () => {
 
   return (
     <div className='oddstable'>
-        {/* <OddButton /> */}
         {
         markets.map((a) => (
-
             <>
                 <hr />
                 <form className="switch-field" key={a.marketId}>
-                        <div className="switch-title">{ a.name }</div>
-                            {
-                                a.lists.map((b) => (
+                    <div className="switch-title">{ a.name }</div>
+                        {
+                            a.lists.map((b, i) => (
+                                <div className="switchers" key={a.marketId + i + 1}>
+                                    {
+                                        b.choices.map((c, i) => (
 
-                                    <>
-
-
-
-
-
-
-                                    <div className="switchers">
-                                        {/* {
-                                            b.choiceGroup && (
-                                                <div className="switch">
-                                                    <div className='switch-header'>
-                                                        { b.choiceGroup }
-                                                    </div>
-
-                                                    <div></div>
-                                                </div>
-
-                                            )
-                                        }
- */}
-
-                                        {
-                                            b.choices.map((c, i) => (
-
-                                                <div className='switch' key={c.sourceId}>
+                                            <div className='switch' key={c.sourceId}>
                                                 <div className='switch-header'>
                                                     { reference(c.name) } { b.choiceGroup }
                                                 </div>
@@ -133,39 +103,20 @@ const OddsTable = () => {
                                                     checked={parseInt(selected) === parseInt(c.sourceId)}
                                                 />
                                                 <label htmlFor="switcher">{ calculateOdds(c.fractionalValue) }</label>
-
-
                                                 </div>
-
-
-
-                                                </div>
-                                            
-
-                                            ))
-                                        }
-
-                                    </div>
-
+                                            </div>
                                         
-                                    </>
-                                ))
-                            }
 
+                                        ))
+                                    }
 
-
-                    </form>
-
-
-
+                                </div>
+                            ))
+                        }
+                </form>
             </>
-
         ))
-        }
-
-
-
-
+    }
     </div>
   )
 }

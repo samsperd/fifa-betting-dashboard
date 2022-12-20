@@ -23,7 +23,6 @@ const MatchesCard = () => {
             Upcoming Matches
         </div>
         <div className="matchesCardBody">
-        {/* <FetchedImage type="team" id="1" className="logo" /> */}
           {
             matches.map((match) => (
                 <div className="matchesCardItem" key={match?.id}>
@@ -32,9 +31,6 @@ const MatchesCard = () => {
                   </div>
                   <div className="teamCard">
                     <div className="team">
-                      {/* <span className="logoBox">
-                          <FetchedImage id={ match?.homeTeam?.id } className="logo" />
-                      </span> */}
                       <span className='teamName'>
                         { match?.homeTeam?.name}
                       </span>

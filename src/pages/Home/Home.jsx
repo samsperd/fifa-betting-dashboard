@@ -4,6 +4,7 @@ import Card from '../../components/Card/Card'
 import LineupCard from '../../components/LineupCard/LineupCard'
 import MatchesCard from '../../components/MatchesCard/MatchesCard'
 import OddsTable from '../../components/OddsTable/OddsTable'
+import Geek from '../../components/geek/Geek'
 import "./home.scss"
 
 const Home = () => {
@@ -13,15 +14,16 @@ const Home = () => {
         <AdCard />
 
       </div>
-      {/* <div className="todayLiveMatches">
+      <div className="todayLiveMatches">
         <MatchesCard />
         <Card />
         <LineupCard />
-      </div> */}
+      </div>
 
       <div className="todayInfo">
 
       <OddsTable />
+      <Geek></Geek>
 
         {/* <div className="todayTable"></div>
         <div className="todayMatches"> */}

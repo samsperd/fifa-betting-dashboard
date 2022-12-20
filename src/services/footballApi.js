@@ -23,7 +23,7 @@ export const footballApi = createApi({
             query: () => createRequest('/api/rankings/fifa')
         }),
         getFootballMatches: builder.query({
-            query: () => createRequest('/api/tournament/16/season/41087/matches/next/0')
+            query: () => createRequest('/api/tournament/16/season/41087/matches/last/0')
         }),
         getFootballTeamLogo: builder.query({
             query: () => createRequest(`/api/team/2672/image`)

@@ -18,13 +18,12 @@
     
     .lineupCardBody {
         padding: 10px 5px;
+        position: relative;
         
         // .field {
-        //     padding: 0;
-        //     margin: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     border: 1px solid #000;
+        //     transform: rotate(90deg);
+        //     transform-origin: bottom;
+        //     top: 30px;
         // }
     }
 

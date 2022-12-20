@@ -1,22 +1,36 @@
-import { AssistWalker,  DirectionsWalk,   NordicWalking, RunCircle } from '@mui/icons-material';
-import React, { useState } from 'react';
+import React from 'react';
 import './OddsButton.scss'
 
 
-const OddButton = () => {
+const OddButton = ({ selected, sourceId, toggler, keyed, value}) => {
 
 
   return (
     <div className="oddbutton">
-      Odds button
-      <div className="container">
-        <div className="card">
-          <div className="cover">
-            <div className="coverFront"></div>
-            <div className="coverFront"></div>
-          </div>
+        <div className="btn">
+            <input
+                type="radio"
+                id={"switcher" + keyed}
+                name={"switchToggle"}
+                value={`${sourceId}`}
+                onChange={toggler}
+                checked={selected === sourceId}
+            />
+          <label htmlFor={'switcher'+ keyed} className="btn_cover">
+            <div className="btn_front_cover">
+              <div className="btn_text">
+                { value }
+              </div>
+            </div>
+
+            <div className="btn_back_cover">
+
+              <div className="btn_text">
+                { value }
+              </div>
+            </div>
+          </label>
         </div>
-      </div>
     </div>
     
 
@@ -24,10 +38,7 @@ const OddButton = () => {
 }
 
 export default OddButton
-    // {/* <section class="container">      
-    //   <div class="folder">
-    //     <div class="paper js">.js</div>
-    //     <div class="paper css">.css</div>
-    //     <div class="paper html">.html</div>
-    //   </div>
-    // </section> */}
+
+
+
+// {/* <OddButton selected={parseInt(selected)} sourceId={c.sourceId} toggler={toggleState} value={calculateOdds(c.fractionalValue)} keyed={i} /> */}

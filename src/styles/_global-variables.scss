@@ -3,7 +3,7 @@ $main-color: #5651e5;
 
 
 @mixin tablet {
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1024px) {
         @content;
     }
 }

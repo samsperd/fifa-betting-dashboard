@@ -32,16 +32,15 @@
 
             .switch-header {
                 display: grid;
+                background-color: white;
+                color: black;
+                font-size: 14px;
+                font-weight: 600;
                 place-items: center;
-                background: linear-gradient(45deg, rgba(#e4e4e4, 0.5),  transparent);
-                box-shadow: 3px 3px 3px #d4d4d4;
-                // background: #550065;
-                // color: goldenrod;
-                border-radius: 5px;
-                backdrop-filter: blur(5px);
-                font-weight: 500;
-                // border: 1px solid rgba(0, 0, 0, 0.2);
-                    
+                text-shadow: none;
+                padding: 6px 14px;
+                box-shadow: inset 0 1px 3px #e4e4e4;
+                        
             }
             .switch-item {
                 position: relative;
@@ -63,35 +62,21 @@
             }
             
             label {
-            display: grid;
-            // width: 100px; #550065
-            background-color: white;
-            color: black;
-            font-size: 14px;
-            font-weight: 600;
-            place-items: center;
-            text-shadow: none;
-            padding: 6px 14px;
-            // border: 1px solid rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0 1px 3px #e4e4e4;
-            transition: all 0.1s ease-in-out;
+                transition: all 0.1s ease-in-out;
 
+                display: grid;
+                place-items: center;
+                background: linear-gradient(45deg, rgba(#e4e4e4, 0.5),  transparent);
+                box-shadow: 3px 3px 3px #d4d4d4;
+                border-radius: 5px;
+                backdrop-filter: blur(5px);
+                font-weight: 500;
+                padding: 6px 14px;
             
-            &:hover {
-                cursor: pointer;
+                &:hover {
+                    cursor: pointer;
+                }
             }
-            }
-            
-
-            
-            //  label:first-of-type {
-            //    border-radius: 4px 0 0 4px;
-            //  }
-            
-            //  label:last-of-type {
-            //    border-radius: 0 4px 4px 0;
-            //  }
-
         }
       }
 
