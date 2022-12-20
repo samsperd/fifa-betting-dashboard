@@ -34,21 +34,18 @@ const MatchesCard = () => {
                       <span className='teamName'>
                         { match?.homeTeam?.name}
                       </span>
-                      {/* <span>
-                        0
-                      </span> */}
+                      <span>
+                        { match?.homeScore?.current }
+                      </span>
                     </div>
 
                     <div className="team">
-                      {/* <span className="logoBox">
-                        <FetchedImage id={ match?.awayTeam?.id } className="logo" />
-                      </span> */}
                       <span className='teamName'>
                       { match?.awayTeam?.name}
                       </span>
-                      {/* <span>
-                        0
-                      </span> */}
+                      <span>
+                      { match?.awayScore?.current }
+                      </span>
                     </div>
 
                   </div>
