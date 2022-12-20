@@ -77,6 +77,7 @@ const OddsTable = () => {
 
   return (
     <div className='oddstable'>
+        <h5> All Markets </h5>
         {
         markets.map((a) => (
             <>
