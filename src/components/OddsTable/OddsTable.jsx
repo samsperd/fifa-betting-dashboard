@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useGetFootballMatchOddsQuery } from '../../services/footballApi'
+// import { useGetFootballMatchOddsQuery } from '../../services/footballApi'
 import "./oddstable.scss"
 import prod from './prod'
 
@@ -49,7 +49,7 @@ function reference(value) {
 
 const OddsTable = () => {
 
-    const { data, isFetching, isError } = useGetFootballMatchOddsQuery()
+    // const { data, isFetching, isError } = useGetFootballMatchOddsQuery()
     const [toggle, setToggle] = useState(false);
     const [selected, setSelected] = useState(0)
 
@@ -61,16 +61,10 @@ const OddsTable = () => {
         setToggle(!toggle)
 	}
     
-    
-    if (isFetching ) {
-        return "loading..."
-    }
-
 
 
     // const markets =  groupedObjects(data?.markets)
     const markets = groupedObjects(prod)
-    console.log(prod);
     console.log(markets);
 
 
