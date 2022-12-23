@@ -5,6 +5,7 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px #eee;
+    height: 270px;
 
     
     
@@ -15,12 +16,33 @@
         justify-content: space-between;
         align-items: center;        
         font-weight: 600;
+
+        .icons {
+            display: flex;
+            gap: 3px;
+
+            .icon {
+                background: #f1f1f1;
+                border-radius: 4px;
+                color: #a1a1a1;
+            }
+        }
     }
     
     .matchesCardBody {
         padding: 10px 5px;
-        height: 450px;
         overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 7px;
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(100, 100, 100, 0.7);
+            border-radius: 5px;
+        }
 
         
         .matchesCardItem {

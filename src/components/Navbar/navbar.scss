@@ -18,10 +18,23 @@
         justify-content: space-between;
 
         .wrapperGreeting {
+
+            .icon {
+                display: none;
+                
+                @include tablet {
+                    display: block;
+                }
+            }
+
+
             h3 {
                 text-shadow: 5px 0 10px rgba(rgb(240, 240, 240), 0.7);
                 // color: #000;
 
+                @include tablet {
+                    display: none;
+                }
             }
         }
 

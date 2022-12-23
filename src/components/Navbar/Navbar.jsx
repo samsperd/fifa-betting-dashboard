@@ -1,14 +1,18 @@
 import React from 'react'
 import "./navbar.scss"
 import face from '../../assets/images/face-5.jpeg'
-import { FiberManualRecord, Notifications, SearchOutlined } from '@mui/icons-material'
+import { FiberManualRecord, Notifications, SearchOutlined, SortOutlined } from '@mui/icons-material'
 
 const Navbar = () => {
   return (
     <div className='navbar'>
         <div className="wrapper">
+            {/* <div className="wrapperMenu">
+
+            </div> */}
 
             <div className="wrapperGreeting">
+                <SortOutlined className='icon' />
                 <h3>
                     Welcome back, Obinna!
                 </h3>

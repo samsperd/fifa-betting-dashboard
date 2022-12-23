@@ -1,26 +1,27 @@
 import React from 'react'
-import { BarChart } from '@mui/icons-material'
+import { BarChart, KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material'
 import moment from 'moment'
-import { useGetFootballMatchesQuery } from '../../services/footballApi'
 import "./matchescard.scss"
+import data from './data'
 
 const MatchesCard = () => {
 
-  const { data, isFetching, isError } = useGetFootballMatchesQuery()
 
-  if (isFetching || isError) {
-    return "Loading..."
-  }
-
-  const matches = data?.events.filter((item) => item.homeTeam?.disabled !== true)
+  const matches = data
 
   console.log(matches);
+
 
 
   return (
     <div className='matchesCard'>
         <div className="matchesCardTitle">
             Upcoming Matches
+            <span className="icons">
+              <KeyboardArrowLeft className='icon' />
+              <KeyboardArrowRight className='icon' />
+
+            </span>
         </div>
         <div className="matchesCardBody">
           {

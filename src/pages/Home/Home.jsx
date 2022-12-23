@@ -10,6 +10,11 @@ import "./home.scss"
 const Home = () => {
   return (
     <div className='home'>
+      <div className='greetings'>
+        <h3>
+          Welcome back, Obinna!
+        </h3>
+      </div>
       <div className="ad">
         <AdCard />
 
