@@ -19,17 +19,8 @@ export const footballApi = createApi({
     reducerPath: 'footballApi',
     baseQuery: fetchBaseQuery({ baseUrl }),
     endpoints: (builder) => ({
-        getFootballRankings: builder.query({
-            query: () => createRequest('/api/rankings/fifa')
-        }),
-        getFootballMatches: builder.query({
-            query: () => createRequest('/api/tournament/16/season/41087/matches/last/0')
-        }),
         getFootballTeamLogo: builder.query({
             query: () => createRequest(`/api/team/2672/image`)
-        }),
-        getFootballMatchOdds: builder.query({
-            query: () => createRequest(`/api/match/10230640/odds`)
         }),
     })
 })

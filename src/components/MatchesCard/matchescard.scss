@@ -50,8 +50,12 @@
             border: 1px solid #f1f1f1;
             padding: 10px 5px;
             border-radius: 5px;
-            grid-template-columns: 15% auto 15%;
+            grid-template-columns: 15% auto;
             // background-color: #550065;
+
+            &.active {
+                background: #f1f1f1;
+            }
             
             .teamCard {
                 // border: 1px solid #f1f1f1;

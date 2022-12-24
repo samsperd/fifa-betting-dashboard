@@ -72,6 +72,7 @@
             .icon {
                 font-size: 22px;
                 color: rgba($color: gray, $alpha: 0.5);
+                transition: 0.5s;
                 
                 @include tablet {
                     font-size: 18px;
@@ -146,6 +147,10 @@
                 span {
                     color: gray;
                     font-weight: bold;
+                }
+
+                &.timer {
+                    color: #550065;
                 }
 
             }

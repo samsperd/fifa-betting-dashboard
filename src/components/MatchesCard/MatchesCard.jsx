@@ -1,15 +1,15 @@
 import React from 'react'
-import { BarChart, KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material'
+import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material'
 import moment from 'moment'
 import "./matchescard.scss"
-import data from './data'
+import data from '../../database/data'
 
-const MatchesCard = () => {
+const MatchesCard = ({ activeMatchId, nextButton, backButton }) => {
 
 
   const matches = data
 
-  console.log(matches);
+  // console.log(matches);
 
 
 
@@ -18,15 +18,15 @@ const MatchesCard = () => {
         <div className="matchesCardTitle">
             Upcoming Matches
             <span className="icons">
-              <KeyboardArrowLeft className='icon' />
-              <KeyboardArrowRight className='icon' />
+              <KeyboardArrowLeft onClick={backButton} className='icon' />
+              <KeyboardArrowRight onClick={nextButton} className='icon' />
 
             </span>
         </div>
         <div className="matchesCardBody">
           {
             matches.map((match) => (
-                <div className="matchesCardItem" key={match?.id}>
+                <div className={ activeMatchId === match?.id ? 'matchesCardItem active' : 'matchesCardItem'} key={match?.id}>
                   <div className="status">
                     { moment(match?.startTimestamp).format('ddd, hA') }
                   </div>
@@ -51,9 +51,9 @@ const MatchesCard = () => {
 
                   </div>
 
-                  <div className="chart">
+                  {/* <div className="chart">
                     <BarChart className='icon' />
-                  </div>
+                  </div> */}
                 </div>
             
             ))

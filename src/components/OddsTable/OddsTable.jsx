@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-// import { useGetFootballMatchOddsQuery } from '../../services/footballApi'
 import "./oddstable.scss"
-import prod from './prod'
-
+import odds from "../../database/odds";
 
 
 function calculateOdds(data) {
@@ -47,9 +45,8 @@ function reference(value) {
     }
 }
 
-const OddsTable = () => {
+const OddsTable = ({ matchId }) => {
 
-    // const { data, isFetching, isError } = useGetFootballMatchOddsQuery()
     const [toggle, setToggle] = useState(false);
     const [selected, setSelected] = useState(0)
 
@@ -60,11 +57,12 @@ const OddsTable = () => {
         console.log(selected);
         setToggle(!toggle)
 	}
+
+    const matchObj = odds.find(obj => obj.eventId === matchId);
     
 
 
-    // const markets =  groupedObjects(data?.markets)
-    const markets = groupedObjects(prod)
+    const markets = groupedObjects(matchObj.markets)
     console.log(markets);
 
 
@@ -74,9 +72,9 @@ const OddsTable = () => {
         <h5> All Markets </h5>
         {
         markets.map((a) => (
-            <>
+            <div key={a.marketId}>
                 <hr />
-                <form className="switch-field" key={a.marketId}>
+                <form className="switch-field">
                     <div className="switch-title">{ a.name }</div>
                         {
                             a.lists.map((b, i) => (
@@ -109,7 +107,7 @@ const OddsTable = () => {
                             ))
                         }
                 </form>
-            </>
+            </div>
         ))
     }
     </div>
