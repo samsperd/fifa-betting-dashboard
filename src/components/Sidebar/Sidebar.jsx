@@ -9,7 +9,7 @@ const Sidebar = () => {
       <div className="top">
         <span className="logo">
           <SportsSoccer className='logoBall' />
-          FIFA<span className='logoSpan'>bet</span>
+          FIFA<span className='logoSpan'>Bet</span>
         </span>
       </div>
       <div className="hr">

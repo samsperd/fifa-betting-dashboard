@@ -95,6 +95,7 @@
                 }
 
                 .imgBox {
+                    cursor: pointer;
                     .img {
                         border-radius: 5px;
                         width: 40px;
@@ -104,6 +105,7 @@
                 }
 
                 .dets {
+                    cursor: pointer;
                     @include tablet {
                         display: none;
                     }
@@ -112,6 +114,18 @@
                         font-size: 14px;
                     }
                 }
+            }
+
+            .profileCard {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 250px;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 3px 3px 17px #ccc;
+                background: white;
+                transition: 0.2s;
             }
         }
     }

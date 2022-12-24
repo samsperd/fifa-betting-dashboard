@@ -33,6 +33,15 @@
             font-weight: 600;
             align-items: center;
             
+            &.off {
+                color: gray;
+                background-color: #eee;
+
+                .icon {
+                    color: gray;
+                }
+            }
+
             @include tablet {
                 font-size: 11px;
             }
@@ -73,6 +82,7 @@
                 font-size: 22px;
                 color: rgba($color: gray, $alpha: 0.5);
                 transition: 0.5s;
+                cursor: pointer;
                 
                 @include tablet {
                     font-size: 18px;

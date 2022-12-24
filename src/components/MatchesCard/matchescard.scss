@@ -50,7 +50,8 @@
             border: 1px solid #f1f1f1;
             padding: 10px 5px;
             border-radius: 5px;
-            grid-template-columns: 15% auto;
+            grid-template-columns: 15% auto 15%;
+            cursor: pointer;
             // background-color: #550065;
 
             &.active {
@@ -93,8 +94,6 @@
                     .teamName {
                         display: flex;
                         align-items: center;
-                        // justify-content: center;
-                        // border: 1px solid #000;
                     }
                 }
             }
@@ -105,19 +104,19 @@
 
             }
 
-            // .secondTeam {
-            //     border: 1px solid #f1f1f1;
-            //     display: grid;
-            //     grid-template-columns: repeat(3, 1fr);
-            //     grid-area: teamtwo;
-            // }
-
             .chart {
-                display: grid;
-                place-items: center;
+                display: flex;
+                font-size: 12px;
+                gap: 3px;
+                font-weight: 500;
 
-                .icon {
-                    color: #e0e0e0;
+                .nm {
+                    display: grid;
+                    place-items: center;
+                }
+                
+                .aggregate {
+                    display: grid;
                 }
             }
 

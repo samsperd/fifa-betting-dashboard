@@ -43,6 +43,10 @@ const Home = () => {
     console.log(currentMatch);
   }
 
+  const handleClickMatch = (value) => {
+    setCurrentMatch(value)
+  }
+
 
   return (
     <div className='home'>
@@ -57,7 +61,7 @@ const Home = () => {
       </div>
 
       <div className="todayLiveMatches">
-        <MatchesCard activeMatchId={currentMatch} nextButton={handleNextButton} backButton={handlePreviousButton} />
+        <MatchesCard activeMatchId={currentMatch} nextButton={handleNextButton} backButton={handlePreviousButton} clickMatch={handleClickMatch} />
         <Card activeMatchId={currentMatch} />
         <LineupCard />
       </div>

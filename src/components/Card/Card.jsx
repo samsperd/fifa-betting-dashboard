@@ -51,7 +51,7 @@ const Card = ({ activeMatchId }) => {
                                     <small className='matchInfo timer'>
                                         72'
                                     </small>
-                            <h1> <span style={{ color: matchObj?.winnerCode === 1 ? 'gold' : ''}} >{ matchObj?.homeScore?.current }</span> : <span style={{ color: matchObj?.winnerCode === 2 ? 'gold' : ''}}>{ matchObj?.awayScore?.current }</span> </h1>
+                                    <h1 style={{ color: '#550065' }}> <span style={{ color: matchObj?.homeScore?.display > matchObj?.awayScore?.display && 'gold'}} >{ matchObj?.homeScore?.display }</span> : <span style={{ color:  matchObj?.awayScore?.display > matchObj?.homeScore?.display && 'gold'}}>{ matchObj?.awayScore?.display }</span> </h1>
 
                             </>
 
@@ -66,13 +66,22 @@ const Card = ({ activeMatchId }) => {
                             </>
                         )
                     }
+
+                    {
+                        isLive ?
+                        matchObj?.homeScore?.penalties && (
+                            <h5>pen. ( <span style={{ color: matchObj?.winnerCode === 1 ? 'gold' : 'black'}} >{ matchObj?.homeScore?.penalties }</span> : <span style={{ color: matchObj?.winnerCode === 2 ? 'gold' : 'black'}}>{ matchObj?.awayScore?.penalties }</span> ) </h5>
+                        )
+                        :
+                        (
+                            <small className='matchInfo'>
+                                Referee: <span>Joseph Hicks</span>
+                            </small>
+
+                        )
+                    }
                 
-                    <small className='matchInfo'>
-                        Referee: <span>Joseph Hicks</span>
-                    </small>
-                    {/* <small className='matchInfo timer'>
-                        <span>72'</span>
-                    </small> */}
+
                     <div className='oddsButtons'>
                         <button>2.13</button>
                         <button>1.98</button>

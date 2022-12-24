@@ -4,7 +4,7 @@ import moment from 'moment'
 import "./matchescard.scss"
 import data from '../../database/data'
 
-const MatchesCard = ({ activeMatchId, nextButton, backButton }) => {
+const MatchesCard = ({ activeMatchId, nextButton, backButton, clickMatch }) => {
 
 
   const matches = data
@@ -26,7 +26,7 @@ const MatchesCard = ({ activeMatchId, nextButton, backButton }) => {
         <div className="matchesCardBody">
           {
             matches.map((match) => (
-                <div className={ activeMatchId === match?.id ? 'matchesCardItem active' : 'matchesCardItem'} key={match?.id}>
+                <div className={ activeMatchId === match?.id ? 'matchesCardItem active' : 'matchesCardItem'} key={match?.id} onClick={() => clickMatch(match?.id)}>
                   <div className="status">
                     { moment(match?.startTimestamp).format('ddd, hA') }
                   </div>
@@ -36,7 +36,7 @@ const MatchesCard = ({ activeMatchId, nextButton, backButton }) => {
                         { match?.homeTeam?.name}
                       </span>
                       <span>
-                        { match?.homeScore?.current }
+                        { match?.homeScore?.display }
                       </span>
                     </div>
 
@@ -45,15 +45,26 @@ const MatchesCard = ({ activeMatchId, nextButton, backButton }) => {
                       { match?.awayTeam?.name}
                       </span>
                       <span>
-                      { match?.awayScore?.current }
+                      { match?.awayScore?.display }
                       </span>
                     </div>
 
                   </div>
+                  {
+                    match?.homeScore?.penalties && (
+                      <div className="chart">
+                      <div className='nm'>
+                        pen.
 
-                  {/* <div className="chart">
-                    <BarChart className='icon' />
-                  </div> */}
+                      </div>
+                        <div className="aggregate">
+                          <div className="teamOne">({ match?.homeScore?.penalties })</div>
+                          <div className="teamTwo">({ match?.awayScore?.penalties })</div>
+                        </div>
+                      </div>
+
+                    )
+                  }
                 </div>
             
             ))
