@@ -1,8 +1,9 @@
 import React from 'react'
 import "./navbar.scss"
 import face from '../../assets/images/face-5.jpeg'
-import { FiberManualRecord, Notifications, SearchOutlined, SortOutlined } from '@mui/icons-material'
+import { AccountBalance, AccountBox, FiberManualRecord, Logout, Notifications, Receipt, Savings, SearchOutlined, SortOutlined } from '@mui/icons-material'
 import { useState } from 'react'
+import { Button } from '@mui/material'
 
 const Navbar = ({ toggleNav }) => {
 
@@ -46,16 +47,26 @@ const Navbar = ({ toggleNav }) => {
                 {
                     displayProfile && (
                         <div className="profileCard">
-                            <div className="amount">
-                                $5,000
+                            <div className="profile">
+                
+                                <span className="imgBox">
+                                <img src={face} alt="" className='img' />
+                                </span>
+                                <div className='info'>
+                                    <span>Obinna Iloeje</span>
+                                    <span>$5,000</span>
+                                </div>
                             </div>
-                            <ul>
-                                <li> Profile </li>
-                                <li> Transactions </li>
-                                <li> Deposit </li>
-                                <li> Withdraw </li>
-                                <li> Logout </li>
-                            </ul>
+
+                            <hr />
+
+                            <div className='otherSources'>
+                                <Button variant='text' startIcon={<AccountBox />}> Profile </Button>
+                                <Button variant='text' startIcon={<Receipt />}> Transactions </Button>
+                                <Button variant='text' startIcon={<Savings />}> Deposit </Button>
+                                <Button variant='text' startIcon={<AccountBalance />}> Withdrawal </Button>
+                                <Button variant='text' startIcon={<Logout />}> Logout </Button>
+                            </div>
                         </div>
 
                     )

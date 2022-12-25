@@ -64,6 +64,7 @@
                 width: 100%;
                 z-index: 2;
                 opacity: 0;
+                cursor: pointer;
 
 
                 &:checked + label {
@@ -75,7 +76,7 @@
             
             label {
                 transition: all 0.1s ease-in-out;
-
+                cursor: pointer;
                 display: grid;
                 place-items: center;
                 background: linear-gradient(45deg, rgba(#e4e4e4, 0.5),  transparent);
@@ -84,10 +85,7 @@
                 backdrop-filter: blur(5px);
                 font-weight: 500;
                 padding: 6px 14px;
-            
-                &:hover {
-                    cursor: pointer;
-                }
+
             }
         }
       }

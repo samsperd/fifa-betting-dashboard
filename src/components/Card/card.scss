@@ -52,17 +52,6 @@
                 animation: pulse 1s infinite;
                 transition: .3s;
             }
-            @keyframes pulse {
-                0% {
-                    transform: scale(1);
-                }
-                70% {
-                    transform: scale(.7);
-                }
-                    100% {
-                    transform: scale(1);
-                }
-            }
         }
         
         .cardTitleText {
@@ -83,6 +72,15 @@
                 color: rgba($color: gray, $alpha: 0.5);
                 transition: 0.5s;
                 cursor: pointer;
+
+                &:hover {
+                    animation-name: pulse;
+                    animation-duration: 1s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: 1;
+
+                }
+
                 
                 @include tablet {
                     font-size: 18px;
@@ -190,7 +188,6 @@
         justify-content: center;
         align-items: center;
         margin-top: 5px;
-        margin-bottom: -25px;
 
         button {
             outline: none;
@@ -198,7 +195,7 @@
             font-size: 14px;
             font-weight: 600;
             background-color: #550065;
-            // background-color: rgb(85, 0, 101);
+            transition: .3s;
             color: white;
             border-radius: 5px;
             cursor: pointer;
@@ -207,12 +204,16 @@
 
             &:hover {
                 background-color: goldenrod;
+                animation-name: wobble;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
             }
 
+            @include tablet {
+                margin-bottom: 10px;
+            }
         }
 
-        @include tablet {
-            margin-bottom: 10px;
-        }
     }
 }

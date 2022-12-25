@@ -123,10 +123,75 @@
                 right: 0;
                 width: 250px;
                 padding: 10px;
-                border-radius: 5px;
+                border-radius: 10px;
                 box-shadow: 3px 3px 17px #ccc;
                 background: white;
-                transition: 0.2s;
+                transition: 0.8s ease-in-out;
+                font-size: 18px;
+                z-index: 2;
+                
+                .profile {
+                    display: flex;
+                    gap: 15px;
+                    // border-bottom: 2px solid rgb(37, 37, 37);
+
+                    .imgBox {
+                        cursor: pointer;
+                        .img {
+                            border-radius: 5px;
+                            width: 70px;
+                            height: 70px;
+                            object-fit: cover;
+                        }
+                    }
+                    
+                    .info {
+                        cursor: pointer; 
+                        color: rgb(8, 8, 8);
+                        font-weight: 600;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        span{
+                            // padding: 10px;
+                            // border: 1px solid #000;
+                            display: flex;
+                            align-items: center;
+                            // justify-content: center;
+                            
+                            &:nth-child(2) {
+                            color: rgb(0, 148, 0);
+                        }}
+                    }
+                }
+                hr {
+                    background-image: linear-gradient(to right, #550065 0%, rgb(255, 231, 92) 51%, #550065 100%);
+                    // background-color:  rgba($color: #550065, $alpha: 0.7);
+                    border: #550065;
+                    height: 4px;
+                    border-radius: 6px;
+                    width: 100%;
+                }
+        
+                .otherSources {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    margin-top: 15px;
+                    
+                    button {
+                        display: flex;
+                        font-size: 14px;
+                        justify-content: flex-start;
+                        color: $main-color;
+                        text-transform: capitalize;
+
+                        &:hover {
+                            background: rgba($color: $main-color, $alpha: 0.04);
+                        }
+                    }
+                }
+
             }
         }
     }

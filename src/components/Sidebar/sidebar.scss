@@ -18,10 +18,14 @@
             z-index: 2;
             top: 0;
             bottom: 0;
-            right: 15%;
+            right: 65%;
             left: 0;
-            transition: right 300ms ease-in-out;
-
+            transition: 3s ease-in-out;
+            
+            @include mobile {
+                right: 15%;
+            }
+            
             .top {
                 .close {
                     display: block;
@@ -41,7 +45,7 @@
         display: none;
         flex: none;
     }
-
+    
     .top {
         height: 80px;
         display: flex;
@@ -49,9 +53,10 @@
         align-items: center;
         // border-bottom: 1px solid #f1f1f1;
         position: relative;
-
+        
         .close{
             display: none;
+            
         }
         
         
