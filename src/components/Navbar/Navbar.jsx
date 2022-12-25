@@ -4,7 +4,7 @@ import face from '../../assets/images/face-5.jpeg'
 import { FiberManualRecord, Notifications, SearchOutlined, SortOutlined } from '@mui/icons-material'
 import { useState } from 'react'
 
-const Navbar = () => {
+const Navbar = ({ toggleNav }) => {
 
     const [displayProfile, setDisplayProfile] = useState(false)
 
@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="wrapper">
 
             <div className="wrapperGreeting">
-                <SortOutlined className='icon' />
+                <SortOutlined onClick={toggleNav} className='icon' />
                 <h3>
                     Welcome back, Obinna!
                 </h3>
@@ -37,7 +37,7 @@ const Navbar = () => {
                     <span className="imgBox" onClick={() => setDisplayProfile(!displayProfile)}>
                     <img src={face} alt="" className='img' />
                     </span>
-                    <span className='dets' onClick={() => setDisplayProfile(!displayProfile)}>
+                    <span className='dets' onClick={() => setDisplayProfile(!displayProfile)} >
                         <h4>Obinna Iloeje</h4>
                         <p>$5,000</p>
                     </span>

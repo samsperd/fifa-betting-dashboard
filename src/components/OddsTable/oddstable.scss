@@ -1,12 +1,24 @@
 @import "../../styles/global-variables";
 
 .oddstable {
-
+    
+    h4 {
+        display: grid;
+        padding: 10px;
+        width: fit-content;
+        place-items: center;
+        background:  linear-gradient(45deg, transparent,  white);
+        // box-shadow: 3px 3px 3px #dfdfdf;
+        border-radius: 5px;
+        margin-bottom: 4px;
+        font-weight: bold;
+    }
 
     .switch-field {
         font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
         padding: 10px;
         overflow: hidden;
+        border-top: 1px solid #ccc;
 
         .switch-title {
             font-weight: bold;

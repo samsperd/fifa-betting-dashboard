@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material'
 import moment from 'moment'
 import "./matchescard.scss"
@@ -8,8 +8,17 @@ const MatchesCard = ({ activeMatchId, nextButton, backButton, clickMatch }) => {
 
 
   const matches = data
+  const cardRef = useRef(null);
 
-  // console.log(matches);
+  useEffect(() => {
+    const card = cardRef.current;
+    const activeItem = card.querySelector('.active');
+    const cardRect = card.getBoundingClientRect();
+    const activeRect = activeItem.getBoundingClientRect();
+    if (activeRect.top < cardRect.top || activeRect.bottom > cardRect.bottom) {
+      activeItem.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [activeMatchId]);  // console.log(matches);
 
 
 
@@ -23,7 +32,7 @@ const MatchesCard = ({ activeMatchId, nextButton, backButton, clickMatch }) => {
 
             </span>
         </div>
-        <div className="matchesCardBody">
+        <div className="matchesCardBody" ref={cardRef}>
           {
             matches.map((match) => (
                 <div className={ activeMatchId === match?.id ? 'matchesCardItem active' : 'matchesCardItem'} key={match?.id} onClick={() => clickMatch(match?.id)}>

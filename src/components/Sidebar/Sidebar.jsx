@@ -1,12 +1,16 @@
-import { AccountCircle, BarChart, Dashboard, Newspaper, Receipt, SportsSoccer, Subscriptions } from '@mui/icons-material'
+import { AccountCircle, BarChart, Close, Dashboard, Newspaper, Receipt, SportsSoccer, Subscriptions } from '@mui/icons-material'
+import { IconButton } from '@mui/material'
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import "./sidebar.scss"
 
-const Sidebar = () => {
+const Sidebar = ({ toggler, closeNav }) => {
   return (
-    <div className="sidebar">
+    <div className={ toggler ? "sidebar open" : "sidebar"}>
       <div className="top">
+        <IconButton aria-label='close' onClick={closeNav} className='close' size='small'>
+          <Close fontSize='inherit' />
+        </IconButton>
         <span className="logo">
           <SportsSoccer className='logoBall' />
           FIFA<span className='logoSpan'>Bet</span>

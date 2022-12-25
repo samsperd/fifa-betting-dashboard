@@ -69,45 +69,42 @@ const OddsTable = ({ matchId }) => {
 
   return (
     <div className='oddstable'>
-        <h5> All Markets </h5>
+        <h4> All Markets </h4>
         {
         markets.map((a) => (
-            <div key={a.marketId}>
-                <hr />
-                <form className="switch-field">
-                    <div className="switch-title">{ a.name }</div>
-                        {
-                            a.lists.map((b, i) => (
-                                <div className="switchers" key={a.marketId + i + 1}>
-                                    {
-                                        b.choices.map((c, i) => (
+            <form className="switch-field" key={a.marketId}>
+                <div className="switch-title">{ a.name }</div>
+                    {
+                        a.lists.map((b, i) => (
+                            <div className="switchers" key={a.marketId + i + 1}>
+                                {
+                                    b.choices.map((c, i) => (
 
-                                            <div className='switch' key={c.sourceId}>
-                                                <div className='switch-header'>
-                                                    { reference(c.name) } { b.choiceGroup }
-                                                </div>
-                                                <div className="switch-item">
-                                                <input
-                                                    type="radio"
-                                                    id={"switcher" + i}
-                                                    name={"switchToggle"}
-                                                    value={c.sourceId}
-                                                    onChange={toggleState}
-                                                    checked={parseInt(selected) === parseInt(c.sourceId)}
-                                                />
-                                                <label htmlFor="switcher">{ calculateOdds(c.fractionalValue) }</label>
-                                                </div>
+                                        <div className='switch' key={c.sourceId}>
+                                            <div className='switch-header'>
+                                                { reference(c.name) } { b.choiceGroup }
                                             </div>
-                                        
+                                            <div className="switch-item">
+                                            <input
+                                                type="radio"
+                                                id={"switcher" + i}
+                                                name={"switchToggle"}
+                                                value={c.sourceId}
+                                                onChange={toggleState}
+                                                checked={parseInt(selected) === parseInt(c.sourceId)}
+                                            />
+                                            <label htmlFor="switcher">{ calculateOdds(c.fractionalValue) }</label>
+                                            </div>
+                                        </div>
+                                    
 
-                                        ))
-                                    }
+                                    ))
+                                }
 
-                                </div>
-                            ))
-                        }
-                </form>
-            </div>
+                            </div>
+                        ))
+                    }
+            </form>
         ))
     }
     </div>

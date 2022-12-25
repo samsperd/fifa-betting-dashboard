@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -7,11 +8,18 @@ import Profile from "./pages/Profile/Profile";
 import "./styles/global.scss"
 
 function App() {
+  const [toggleNav, setToggleNav] = useState(false)
+
+  const handleToggleNav = () => {
+    setToggleNav(!toggleNav)
+  }
+
+
   return (
     <div className="App">
-      <Sidebar />
+      <Sidebar toggler={toggleNav} closeNav={handleToggleNav} />
       <div className="AppContainer">
-        <Navbar />
+        <Navbar toggleNav={handleToggleNav} />
         <div className="main">
           <Routes>
             <Route path="/">

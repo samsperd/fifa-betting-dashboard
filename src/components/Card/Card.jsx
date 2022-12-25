@@ -48,10 +48,10 @@ const Card = ({ activeMatchId }) => {
                     {
                         isLive ? (
                             <>
-                                    <small className='matchInfo timer'>
-                                        72'
-                                    </small>
-                                    <h1 style={{ color: '#550065' }}> <span style={{ color: matchObj?.homeScore?.display > matchObj?.awayScore?.display && 'gold'}} >{ matchObj?.homeScore?.display }</span> : <span style={{ color:  matchObj?.awayScore?.display > matchObj?.homeScore?.display && 'gold'}}>{ matchObj?.awayScore?.display }</span> </h1>
+                                <small className='matchInfo timer'>
+                                    72'
+                                </small>
+                                <h1 style={{ color: '#550065' }}> <span style={{ color: matchObj?.homeScore?.display > matchObj?.awayScore?.display && 'gold'}} >{ matchObj?.homeScore?.display }</span> : <span style={{ color:  matchObj?.awayScore?.display > matchObj?.homeScore?.display && 'gold'}}>{ matchObj?.awayScore?.display }</span> </h1>
 
                             </>
 

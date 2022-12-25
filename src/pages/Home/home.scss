@@ -3,12 +3,30 @@
 .home {
     .greetings {
         font-size: 14px;
-        color: gray;
-        margin-bottom: 15px;
-
+        margin-top: 7px;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        
         h3 {
             text-shadow: 5px 0 10px rgba(rgb(240, 240, 240), 0.7);
             display: none;
+            color: gray;
+            // -webkit-text-stroke: 0.3vw white;
+            // position: relative;
+            // // width: fit-content;
+            
+            // &::before {
+            //     content: 'Welcome back, Obinna!';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     border-right: 2px solid #000;
+            //     width: 0%;
+            //     -webkit-text-stroke: 0vw gray;
+            //     height: 100%;
+            //     color: gray;
+            // }
+
 
             @include tablet {
                 display: block;
