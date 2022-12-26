@@ -3,6 +3,7 @@ import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material'
 import moment from 'moment'
 import "./matchescard.scss"
 import data from '../../database/data'
+import Logo from '../Logo/Logo'
 
 const MatchesCard = ({ activeMatchId, nextButton, backButton, clickMatch }) => {
 
@@ -41,6 +42,9 @@ const MatchesCard = ({ activeMatchId, nextButton, backButton, clickMatch }) => {
                   </div>
                   <div className="teamCard">
                     <div className="team">
+                      <span className="teamLogo">
+                        <Logo id={ match?.homeTeam?.id } className="logo" />
+                      </span>
                       <span className='teamName'>
                         { match?.homeTeam?.name}
                       </span>
@@ -50,6 +54,10 @@ const MatchesCard = ({ activeMatchId, nextButton, backButton, clickMatch }) => {
                     </div>
 
                     <div className="team">
+                      <span className='teamLogo'>
+                        <Logo id={ match?.awayTeam?.id } className="logo" />
+                      </span>
+                    
                       <span className='teamName'>
                       { match?.awayTeam?.name}
                       </span>

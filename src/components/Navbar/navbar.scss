@@ -12,7 +12,6 @@
     .wrapper {
         display: flex;
         width: 100%;
-        // border: 1px solid #000;
         padding: 20px;
         align-items: center;
         justify-content: space-between;
@@ -133,7 +132,6 @@
                 .profile {
                     display: flex;
                     gap: 15px;
-                    // border-bottom: 2px solid rgb(37, 37, 37);
 
                     .imgBox {
                         cursor: pointer;
@@ -153,11 +151,8 @@
                         flex-direction: column;
                         
                         span{
-                            // padding: 10px;
-                            // border: 1px solid #000;
                             display: flex;
                             align-items: center;
-                            // justify-content: center;
                             
                             &:nth-child(2) {
                             color: rgb(0, 148, 0);
@@ -165,9 +160,9 @@
                     }
                 }
                 hr {
-                    background-image: linear-gradient(to right, #550065 0%, rgb(255, 231, 92) 51%, #550065 100%);
+                    background-image: linear-gradient(to right, $main-color 0%, $secondary_color 51%, $main-color 100%);
                     // background-color:  rgba($color: #550065, $alpha: 0.7);
-                    border: #550065;
+                    border: $main-color;
                     height: 4px;
                     border-radius: 6px;
                     width: 100%;

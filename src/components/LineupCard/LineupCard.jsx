@@ -42,7 +42,6 @@ export default class LineupCard extends Component {
           <div className="field">
             <SoccerLineUp
               size='responsive'
-              color='#550065'
               pattern='lines'
               homeTeam={ showHomeTeam ? this.buildHomeTeam() : undefined }
               awayTeam={ showAwayTeam ? this.buildAwayTeam() : undefined }

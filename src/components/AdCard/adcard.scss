@@ -2,7 +2,7 @@
 
 .adcard {
     display: flex;
-    background-image: linear-gradient(to right, #550065 0%, rgb(255, 231, 92) 51%, #550065 100%);
+    background-image: linear-gradient(to right, $main-color 0%, $secondary_color 51%, $main-color 100%);
     background-size: 120% auto;
     color: white;
     height: 130px;
