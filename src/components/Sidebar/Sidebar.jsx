@@ -1,4 +1,4 @@
-import { AccountCircle, BarChart, Close, Dashboard, Newspaper, Receipt, SportsSoccer, Subscriptions } from '@mui/icons-material'
+import { AccountCircle, BarChart, Close, Dashboard, Logout, Newspaper, Receipt, SportsSoccer, Subscriptions } from '@mui/icons-material'
 import { IconButton } from '@mui/material'
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
@@ -86,6 +86,14 @@ const Sidebar = ({ toggler, closeNav }) => {
                 <AccountCircle className='icon' />
                 <span>
                   Profile
+                </span>
+              </li>
+            </Link>
+            <Link to={'/'}>
+              <li>
+                <Logout className='icon' />
+                <span>
+                  Logout
                 </span>
               </li>
             </Link>

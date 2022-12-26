@@ -12,6 +12,7 @@
         border-radius: 5px;
         margin-bottom: 4px;
         font-weight: bold;
+        color: rgb(22, 22, 22);
     }
 
     .switch-field {
@@ -21,8 +22,10 @@
         border-top: 1px solid #ccc;
 
         .switch-title {
-            font-weight: bold;
+            font-weight: 500;
             margin-bottom: 6px;
+            color: #000;
+            text-transform: capitalize;
         }
 
       .switchers {

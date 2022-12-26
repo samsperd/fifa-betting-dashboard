@@ -17,7 +17,7 @@
   // }
   
   .AppContainer {
-    flex: 4;
+    flex: 4.3;
     
     @include tablet {
       flex: none;
@@ -28,7 +28,7 @@
     // }
 
     .main {
-      padding: 20px;
+      padding: 6px 20px;
 
       @include tablet {
         padding: 10px;

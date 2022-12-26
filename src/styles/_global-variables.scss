@@ -16,6 +16,18 @@ $secondary_color_shade: gold;
     }
 }
 
+@keyframes bg-animation {
+    0% {
+        background-position: center left;
+    }
+
+    100% {
+        background-position: center center;
+    }
+}
+
+
+
 @keyframes wobble {
     16.65% {
         transform: translateX(8px);

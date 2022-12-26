@@ -11,21 +11,12 @@
     transition: 0.5s;
     justify-content: space-between;
     animation: bg-animation 2s infinite alternate;
+    box-shadow: 0 0 10px #eee;
     
     @include tablet {
 
         height: 100px;
         font-size: 15px;
-    }
-
-    @keyframes bg-animation {
-        0% {
-            background-position: center left;
-        }
-
-        100% {
-            background-position: center center;
-        }
     }
 
     .adText {

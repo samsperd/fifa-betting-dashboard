@@ -8,6 +8,7 @@
     align-items: center;
     font-size: 14px;
     color: gray;
+    box-shadow: 5px -12px 12px -12px black;
 
     .wrapper {
         display: flex;
@@ -64,6 +65,9 @@
                 @include tablet {
                     border: none;
                 }
+
+
+
                 
             }
 
@@ -103,7 +107,7 @@
                         object-fit: cover;
                     }
                 }
-
+                
                 .dets {
                     cursor: pointer;
                     @include tablet {
@@ -125,7 +129,7 @@
                 border-radius: 10px;
                 box-shadow: 3px 3px 17px #ccc;
                 background: white;
-                transition: 0.8s ease-in-out;
+                transition: all 0.8s ease-in-out;
                 font-size: 18px;
                 z-index: 2;
                 
@@ -188,6 +192,7 @@
                 }
 
             }
+
         }
     }
 }

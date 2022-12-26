@@ -204,12 +204,15 @@
     .cardActions {
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin-top: 5px;
+        // align-items: center;
+        // margin-top: 5px;
+        position: relative;
 
         button {
             outline: none;
             border: none;
+            position: absolute;
+            bottom: -65px;
             font-size: 14px;
             font-weight: 600;
             background-color: $main-color;
@@ -228,9 +231,19 @@
                 animation-iteration-count: 1;
             }
 
-            @include tablet {
+        }
+        @include tablet {
+            position: none;
+            align-items: center;
+            margin-top: 5px;
+
+            button {
                 margin-bottom: 10px;
+                position: relative;
+                bottom: 0;
+
             }
+            
         }
 
     }
