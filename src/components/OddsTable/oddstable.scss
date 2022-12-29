@@ -1,7 +1,10 @@
 @import "../../styles/global-variables";
 
 .oddstable {
-    
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+
+
+
     h4 {
         display: grid;
         padding: 10px;
@@ -30,13 +33,14 @@
 
       .switchers {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
         margin-bottom: 15px;
 
-        @include tablet {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
+        // @include tablet {
+        //     grid-template-columns: 1fr 1fr 1fr;
+        // }
       
         
         .switch{

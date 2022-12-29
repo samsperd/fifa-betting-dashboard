@@ -52,9 +52,17 @@ const OddsTable = ({ matchId }) => {
 
 
 	const toggleState = (e) => {
-        setSelected(e.target.value)
+        if (parseInt(selected) === parseInt(e.target.value)) {
+            setSelected(0)
+            
+        } else {
+            setSelected(e.target.value)
+            
+        }
         
-        console.log(selected);
+        
+        console.log('book = ' + e.target.value);
+        console.log('Goat = ' + selected);
         setToggle(!toggle)
 	}
 

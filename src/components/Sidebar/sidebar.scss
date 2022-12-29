@@ -9,10 +9,9 @@
     box-shadow: 0 0 5px #eee;
     
     @include tablet {
-        // display: none;
-        // flex: none;
+        display: none;
+        flex: none;
         position: absolute;
-        right: -100%;
         transition: right 0.5s ease-in-out;
         
         &.open {

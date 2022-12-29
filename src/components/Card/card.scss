@@ -4,7 +4,7 @@
     background: white;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #eee;
+    box-shadow: 0 8px 13px rgba(0,0,0,.1);
     
     @include tablet {
         padding: 5px;
@@ -221,7 +221,7 @@
             border-radius: 5px;
             cursor: pointer;
             padding: 8px 41px;
-            box-shadow: 0 0 5px #eee;
+            box-shadow: 0 10px 15px rgba(0,0,0,.1);
 
             &:hover {
                 background-color: $secondary_color_shade;
