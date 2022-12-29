@@ -4,13 +4,13 @@
     display: flex;
     background-image: linear-gradient(to right, $main-color 0%, $secondary_color 51%, $main-color 100%);
     background-size: 120% auto;
+    animation: bg-animation 2s infinite alternate;
     color: white;
     height: 130px;
     padding: 0 10px;
     border-radius: 10px;
     transition: 0.5s;
     justify-content: space-between;
-    animation: bg-animation 2s infinite alternate;
     box-shadow: 0 8px 13px rgba(0,0,0,.1);
     
     @include tablet {

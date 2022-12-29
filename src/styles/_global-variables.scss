@@ -25,6 +25,30 @@ $secondary_color_shade: gold;
         background-position: center center;
     }
 }
+// @keyframes bg-animation {
+//     0% {
+//         background-position: center left;
+//     }
+
+//     100% {
+//         background-position: center center;
+//     }
+// }
+
+
+@keyframes live-animation {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    // 50% {
+    //     background-position: 100% 50%;
+    // }
+
+    100% {
+        background-position: 200% 0%;
+    }
+}
 
 
 

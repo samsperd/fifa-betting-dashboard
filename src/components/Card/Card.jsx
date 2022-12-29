@@ -19,7 +19,7 @@ const Card = ({ activeMatchId }) => {
     return (
         <div className='card'>
             <div className="cardTitle">
-                <span className='cardTitleLive'>
+                <span className={ isLive ? 'cardTitleLive on' : 'cardTitleLive off'}>
                     <FiberManualRecord className='icon' />
                     Live
                 </span>
@@ -50,7 +50,7 @@ const Card = ({ activeMatchId }) => {
                         isLive ? (
                             <>
                                 <small className='matchInfo timer'>
-                                    72'
+                                    72<span>'</span>
                                 </small>
                                 <h1 className='mainc'> <span className={ matchObj?.homeScore?.display > matchObj?.awayScore?.display && 'gold'} >{ matchObj?.homeScore?.display }</span> : <span className={ matchObj?.awayScore?.display > matchObj?.homeScore?.display && 'gold'}>{ matchObj?.awayScore?.display }</span> </h1>
 

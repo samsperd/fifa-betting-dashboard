@@ -48,12 +48,12 @@ function reference(value) {
 const OddsTable = ({ matchId }) => {
 
     const [toggle, setToggle] = useState(false);
-    const [selected, setSelected] = useState(0)
+    const [selected, setSelected] = useState('')
 
 
 	const toggleState = (e) => {
         if (parseInt(selected) === parseInt(e.target.value)) {
-            setSelected(0)
+            setSelected('')
             
         } else {
             setSelected(e.target.value)
@@ -94,7 +94,7 @@ const OddsTable = ({ matchId }) => {
                                             </div>
                                             <div className="switch-item">
                                             <input
-                                                type="radio"
+                                                type="checkbox"
                                                 id={"switcher" + i}
                                                 name={"switchToggle"}
                                                 value={c.sourceId}

@@ -6,7 +6,7 @@ import MatchesCard from '../../components/MatchesCard/MatchesCard'
 import OddsTable from '../../components/OddsTable/OddsTable'
 import "./home.scss"
 import data from "../../database/data";
-import Geek from '../../components/geek/Geek'
+import CreditCard from '../../components/CreditCard/CreditCard'
 
 const Home = () => {
 
@@ -71,7 +71,8 @@ const Home = () => {
 
       <OddsTable matchId={currentMatch} />
 
-      <Geek />
+      <CreditCard />
+
 
       </div>
 

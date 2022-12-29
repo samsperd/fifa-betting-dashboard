@@ -23,10 +23,8 @@
         }
         
         .cardTitleLive {
-            background-color: rgba($color: red, $alpha: 0.2);
             font-size: 13px;
             display: flex;
-            color: red;
             padding: 5px 10px;
             border-radius: 5px;
             font-weight: 600;
@@ -35,9 +33,18 @@
             &.off {
                 color: gray;
                 background-color: #eee;
-
+                
                 .icon {
                     color: gray;
+                }
+            }
+            &.on {
+                color: red;
+                background-color: rgba($color: red, $alpha: 0.2);
+
+                .icon {
+                    color: red;
+                    animation: pulse 1s infinite;
                 }
             }
 
@@ -47,8 +54,6 @@
             
             .icon {
                 font-size: 13px;
-                color: red;
-                animation: pulse 1s infinite;
                 transition: .3s;
             }
         }
@@ -176,7 +181,26 @@
                 }
 
                 &.timer {
-                    color: $main-color;
+                    color: $secondary_color;
+
+                    span {
+                        color: $main-color;
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        // border-bottom-width: 1px;
+                        // border-bottom-color: #000;
+                        // border-bottom-style: solid;
+                        background-image: linear-gradient(to right, $secondary_color 30%, $main-color 100%);
+                        background-size: 200% auto;
+                        // border-bottom-right-radius: 70%;
+                        // border-top-right-radius: 70%;
+                        animation: live-animation 2s infinite alternate;
+                        height: 2px;
+                        margin-bottom: 1px;
+                    }
                 }
 
             }
