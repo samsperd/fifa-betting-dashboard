@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./oddstable.scss"
 import odds from "../../database/odds";
+import { useSelector } from 'react-redux';
 
 
 function calculateOdds(data) {
@@ -45,11 +46,11 @@ function reference(value) {
     }
 }
 
-const OddsTable = ({ matchId }) => {
+const OddsTable = () => {
 
     const [toggle, setToggle] = useState(false);
     const [selected, setSelected] = useState('')
-
+    const matchId = useSelector(state => state.matchId.matchId);
 
 	const toggleState = (e) => {
         if (parseInt(selected) === parseInt(e.target.value)) {

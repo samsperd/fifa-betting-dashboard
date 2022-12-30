@@ -1,16 +1,19 @@
-import { CircleOutlined, FiberManualRecord, SquareOutlined, StarOutlineOutlined } from '@mui/icons-material'
+import { CircleOutlined, FiberManualRecord, SquareOutlined, Star, StarOutlineOutlined } from '@mui/icons-material'
 import { Divider } from '@mui/material'
 import React from 'react'
 import "./card.scss"
 import data from '../../database/data'
 import { useState } from 'react'
 import Logo from '../Logo/Logo'
+import { useSelector } from 'react-redux'
 
-const Card = ({ activeMatchId }) => {
+const Card = () => {
 
     const [isLive, setIsLive] = useState(true)
+    const [starBG, setStarBG] = useState(false)
+    const matchId = useSelector(state => state.matchId.matchId);
 
-    const matchObj = data.find(obj => obj.id === activeMatchId);
+    const matchObj = data.find(obj => obj.id === matchId);
 
     console.log('====================================');
     console.log(matchObj);
@@ -29,7 +32,10 @@ const Card = ({ activeMatchId }) => {
                 </div>
 
                 <div className='cardTitleIcons'>
-                    <StarOutlineOutlined className='icon' />
+                    {
+                        starBG ? (<Star style={{ color: 'goldenrod' }} onClick={() => setStarBG(!starBG)} className='icon' />) : (<StarOutlineOutlined className='icon' onClick={() => setStarBG(!starBG)} />)
+                    }
+                    
 
                     <Divider orientation='vertical' flexItem />
                     {
@@ -52,7 +58,7 @@ const Card = ({ activeMatchId }) => {
                                 <small className='matchInfo timer'>
                                     72<span>'</span>
                                 </small>
-                                <h1 className='mainc'> <span className={ matchObj?.homeScore?.display > matchObj?.awayScore?.display && 'gold'} >{ matchObj?.homeScore?.display }</span> : <span className={ matchObj?.awayScore?.display > matchObj?.homeScore?.display && 'gold'}>{ matchObj?.awayScore?.display }</span> </h1>
+                                <h1 className='mainc'> <span className={ matchObj?.homeScore?.display > matchObj?.awayScore?.display ? 'gold' : undefined} >{ matchObj?.homeScore?.display }</span> : <span className={ matchObj?.awayScore?.display > matchObj?.homeScore?.display ? 'gold' : undefined}>{ matchObj?.awayScore?.display }</span> </h1>
 
                             </>
 

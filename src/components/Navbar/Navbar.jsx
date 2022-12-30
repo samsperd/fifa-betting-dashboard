@@ -1,13 +1,32 @@
 import React from 'react'
 import "./navbar.scss"
 import face from '../../assets/images/face-5.jpeg'
-import { AccountBalance, AccountBox, FiberManualRecord, Logout, Notifications, Receipt, Savings, SearchOutlined, SortOutlined } from '@mui/icons-material'
+import { AccountBalance, AccountBox, DarkMode, FiberManualRecord, LightMode, Logout, Notifications, Receipt, Savings, SearchOutlined, SortOutlined } from '@mui/icons-material'
 import { useState } from 'react'
 import { Button } from '@mui/material'
+import { useDispatch, useSelector } from 'react-redux'
+import { lightMode, darkMode } from '../../store/slices/colorMode'
 
 const Navbar = ({ toggleNav }) => {
 
     const [displayProfile, setDisplayProfile] = useState(false)
+
+    const [displaySearch, setDisplaySearch] = useState(false)
+    
+    const dispatch = useDispatch()
+
+    const colorMode = useSelector(state => state.colorMode.mode);
+
+    console.log('====================================');
+    console.log(colorMode);
+    console.log('====================================');
+
+    const handleSearch = () => {
+        setDisplayProfile(false)
+
+        setDisplaySearch(!displaySearch)
+    }
+
 
   return (
     <div className='navbar'>
@@ -18,16 +37,41 @@ const Navbar = ({ toggleNav }) => {
                 <h3>
                     Welcome back, Obinna!
                 </h3>
+                    {/* <span className="logo">
+                <SportsSoccer className='logoBall' />
+                FIFA<span className='logoSpan'>Bet</span></span> */}
             </div>
+
+
 
 
             <div className="personal">
             <div className="search">
                 <input type="text" />
-                <SearchOutlined className='icon' />
+                <SearchOutlined onClick={handleSearch} className='icon' />
+                {
+                    displaySearch && (
+                        <div className="searchCard">
+                            <input type="text" placeholder='Search...' />
+                            <SearchOutlined className='icon' />
+                            
+                        </div>
+                        
+                    )
+                }
             </div>
                 <div className="profile">
-            
+                    <span className="iconSpan colorMode">
+                        {
+                            colorMode === 'light' ?
+                            (<LightMode onClick={() => dispatch(darkMode())} className='icon' />)
+                            :
+                            (<DarkMode onClick={() => dispatch(lightMode())} className='icon' />)
+                        }
+                        
+                    </span>
+
+
                     <span className="iconSpan">
                         <Notifications className='icon' />
                         <sup>
@@ -35,6 +79,7 @@ const Navbar = ({ toggleNav }) => {
 
                         </sup>
                     </span>
+
                     <span className="imgBox" onClick={() => setDisplayProfile(!displayProfile)}>
                     <img src={face} alt="" className='img' />
                     </span>

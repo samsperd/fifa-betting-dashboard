@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -14,9 +15,11 @@ function App() {
     setToggleNav(!toggleNav)
   }
 
+  const colorMode = useSelector(state => state.colorMode.mode)
+
 
   return (
-    <div className="App">
+    <div className={`App ${colorMode}`}>
       <Sidebar toggler={toggleNav} closeNav={handleToggleNav} />
       <div className="AppContainer">
         <Navbar toggleNav={handleToggleNav} />
