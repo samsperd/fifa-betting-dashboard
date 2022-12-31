@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import "./oddstable.scss"
 import odds from "../../database/odds";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addBet, removeBet } from '../../store/slices/betslipSlice';
 
 
 function calculateOdds(data) {
@@ -46,33 +47,51 @@ function reference(value) {
     }
 }
 
+function convertObjectToString(choiceId, choiceOdd, eventId, choiceName, marketName) {
+    
+    const obj = {
+
+        choiceId,
+        choiceOdd,
+        eventId,
+        choiceName,
+        marketName,
+    }
+
+
+    return JSON.stringify(obj)
+}
+
+function joint (name, group) {
+    if (group === null) {
+        return `${name}`
+    }
+    else {
+        return `${name} ${group}`
+    }
+}
+
 const OddsTable = () => {
 
+    const dispatch = useDispatch()
+
     const [toggle, setToggle] = useState(false);
-    const [selected, setSelected] = useState('')
     const matchId = useSelector(state => state.matchId.matchId);
+    const bets = useSelector(state => state.betslip.bets)
 
 	const toggleState = (e) => {
-        if (parseInt(selected) === parseInt(e.target.value)) {
-            setSelected('')
-            
-        } else {
-            setSelected(e.target.value)
-            
-        }
         
+        dispatch(addBet(e))
         
-        console.log('book = ' + e.target.value);
-        console.log('Goat = ' + selected);
         setToggle(!toggle)
 	}
 
     const matchObj = odds.find(obj => obj.eventId === matchId);
+    const selectedBet = bets.find(obj => obj.eventId === matchId) || {};
     
 
 
     const markets = groupedObjects(matchObj.markets)
-    console.log(markets);
 
 
 
@@ -98,9 +117,16 @@ const OddsTable = () => {
                                                 type="checkbox"
                                                 id={"switcher" + i}
                                                 name={"switchToggle"}
-                                                value={c.sourceId}
+                                                value={ convertObjectToString(
+                                                    c.sourceId,
+                                                    calculateOdds(c.fractionalValue),
+                                                    matchId,
+                                                    joint(reference(c.name), b.choiceGroup),
+                                                    a.name
+                                                )
+                                                }
                                                 onChange={toggleState}
-                                                checked={parseInt(selected) === parseInt(c.sourceId)}
+                                                checked={parseInt(selectedBet.choiceId) === parseInt(c.sourceId)}
                                             />
                                             <label htmlFor="switcher">{ calculateOdds(c.fractionalValue) }</label>
                                             </div>

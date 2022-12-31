@@ -42,7 +42,7 @@ const MatchesCard = ({ activeMatchId, nextButton, backButton, clickMatch }) => {
     if (activeRect.top < cardRect.top || activeRect.bottom > cardRect.bottom) {
       activeItem.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [matchId]);  // console.log(matches);
+  }, [matchId]);
 
 
 

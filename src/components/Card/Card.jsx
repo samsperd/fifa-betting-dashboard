@@ -14,10 +14,6 @@ const Card = () => {
     const matchId = useSelector(state => state.matchId.matchId);
 
     const matchObj = data.find(obj => obj.id === matchId);
-
-    console.log('====================================');
-    console.log(matchObj);
-    console.log('====================================');
     
     return (
         <div className='card'>
