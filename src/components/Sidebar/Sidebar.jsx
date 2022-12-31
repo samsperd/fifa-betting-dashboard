@@ -100,11 +100,11 @@ const Sidebar = ({ toggler, closeNav }) => {
           </div>
         </ul>
       </div>
-      <div className="bottom">
+      {/* <div className="bottom">
         <div>
           Box
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

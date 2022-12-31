@@ -34,7 +34,10 @@ const Home = () => {
 
       <PaymentAndBets />
 
+      </div>
 
+      <div className="footer">
+        Thanks to <a href="https://rapidapi.com/fluis.lacasse/api/footapi7" target="_blank" rel="noopener noreferrer"> FootAPI </a> for making this project possible
       </div>
 
 
