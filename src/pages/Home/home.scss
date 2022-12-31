@@ -54,9 +54,11 @@
     }
 
     .footer {
+        margin-top: 20px;
         height: 70px;
         background-color: rgb(199, 199, 199);
         color: gray;
-        font-size: 15px;
+        display: grid;
+        place-items: center;
     }
 }
