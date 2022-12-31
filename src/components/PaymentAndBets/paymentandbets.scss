@@ -11,6 +11,7 @@
         .css-heg063-MuiTabs-flexContainer {
             justify-content: space-around;
 
+            .css-1q2h7u5.Mui-selected,
             .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
                 color: $main-color !important;
             }
@@ -19,7 +20,8 @@
             //     text-transform: capitalize;
             // }
         }
-        .css-13xfq8m-MuiTabPanel-root {
+        .css-13xfq8m-MuiTabPanel-root,
+        .css-19kzrtu {
             padding: 24px 1px !important;
         }
 
