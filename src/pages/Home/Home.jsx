@@ -5,7 +5,7 @@ import LineupCard from '../../components/LineupCard/LineupCard'
 import MatchesCard from '../../components/MatchesCard/MatchesCard'
 import OddsTable from '../../components/OddsTable/OddsTable'
 import "./home.scss"
-import CreditCard from '../../components/CreditCard/CreditCard'
+import PaymentAndBets from '../../components/PaymentAndBets/PaymentAndBets'
 
 const Home = () => {
 
@@ -32,7 +32,7 @@ const Home = () => {
 
       <OddsTable />
 
-      <CreditCard />
+      <PaymentAndBets />
 
 
       </div>

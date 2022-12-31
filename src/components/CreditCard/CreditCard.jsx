@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import './CreditCard.scss'
 import Cards from 'react-credit-cards-2'
 import { formatCreditCardNumber, formatCVC, formatExpirationDate } from './filters'
-import Geek from '../geek/Geek'
-import ReUsableCard from '../ReUsableCard/ReUsableCard'
 
 const CreditCard = () => {
 
@@ -89,13 +87,6 @@ const CreditCard = () => {
             </form>
 
         </div>
-
-        <ReUsableCard title={'Betslip'}>
-            Body of bet slip
-        </ReUsableCard>
-
-        {/* <Geek /> */}
-
     </div>
   )
 }

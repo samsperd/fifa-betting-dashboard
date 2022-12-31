@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./oddstable.scss"
 import odds from "../../database/odds";
 import { useDispatch, useSelector } from 'react-redux';
-import { addBet, removeBet } from '../../store/slices/betslipSlice';
+import { addBet } from '../../store/slices/betslipSlice';
 
 
 function calculateOdds(data) {

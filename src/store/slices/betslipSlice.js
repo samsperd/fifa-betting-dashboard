@@ -1,12 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
+import data from '../../database/data'
 
 
 export const betslipSlice = createSlice({
     name: 'betslip',
     initialState: {
-        totalItems: null,
         bets : [],
-        totalamount: 0
+        totalAmount: 0,
+        stake: 100,
+        totalOdds: 0
     },
 
     reducers: {
@@ -14,6 +16,8 @@ export const betslipSlice = createSlice({
 
             const { checked, value } = action.payload.target
             const parseValue = JSON.parse(value)
+            const match = data.find(obj => obj.id === parseValue.eventId)
+            parseValue["matchName"] = `${match?.homeTeam?.name} vs ${match?.awayTeam?.name}`
             const checking = state.bets.reduce((checker, obj) => checker || obj.eventId === parseValue.eventId, false);
             
             if (checked) {
@@ -31,17 +35,25 @@ export const betslipSlice = createSlice({
                 state.bets = state.bets.filter((bet) => bet.eventId !== parseValue.eventId)
             }
 
-            console.log('==============boker======================');
-            console.log(state.bets);
-            console.log('==============boker======================');
-            
+            state.totalOdds = parseFloat(Number(state.bets.reduce((accumulator, currentValue) => Number(accumulator) * Number(currentValue.choiceOdd), 1)).toFixed(2));
+
+            state.totalAmount = parseFloat(Number(state.totalOdds * state.stake).toFixed(2))            
 
         },
     
         removeBet: (state, action) => {
-            console.log(action.payload);
 
-            state.bets.filter((bet) => bet.id !== action.payload)
+            state.bets = state.bets.filter((bet) => bet.eventId !== action.payload)
+            state.totalOdds = parseFloat(Number(state.bets.reduce((accumulator, currentValue) => Number(accumulator) * Number(currentValue.choiceOdd), 1)).toFixed(2));
+
+            state.totalAmount = parseFloat(Number(state.totalOdds * state.stake).toFixed(2))            
+
+
+        },
+
+        updateStake: (state, action) => {
+            state.stake = Number(action.payload)
+            state.totalAmount = parseFloat(Number(state.totalOdds * state.stake).toFixed(2))
         }
 
 
@@ -51,4 +63,4 @@ export const betslipSlice = createSlice({
 })
 
 
-export const { addBet, removeBet } = betslipSlice.actions
+export const { addBet, removeBet, updateStake } = betslipSlice.actions

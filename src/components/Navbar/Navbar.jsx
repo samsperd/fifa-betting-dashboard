@@ -17,9 +17,6 @@ const Navbar = ({ toggleNav }) => {
 
     const colorMode = useSelector(state => state.colorMode.mode);
 
-    console.log('====================================');
-    console.log(colorMode);
-    console.log('====================================');
 
     const handleSearch = () => {
         setDisplayProfile(false)
