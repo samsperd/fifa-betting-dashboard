@@ -14,6 +14,7 @@ export const betslipSlice = createSlice({
     reducers: {
         addBet: (state, action) => {
 
+
             const { checked, value } = action.payload.target
             const parseValue = JSON.parse(value)
             const match = data.find(obj => obj.id === parseValue.eventId)

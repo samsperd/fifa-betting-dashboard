@@ -29,6 +29,7 @@
             border-radius: 5px;
             font-weight: 600;
             align-items: center;
+            cursor: pointer;
             
             &.off {
                 color: gray;
@@ -75,15 +76,25 @@
                 color: rgba($color: gray, $alpha: 0.5);
                 transition: 0.5s;
                 cursor: pointer;
-
+                
                 &:hover {
                     animation-name: pulse;
                     animation-duration: 1s;
                     animation-timing-function: ease-in-out;
                     animation-iteration-count: 1;
-
+                    
                 }
-
+                
+                // &:nth-child(3) {
+                //     background-color: rgba($color: gray, $alpha: 0.5);
+                //     color: white;
+                //     animation-name: pulse;
+                //     animation-duration: 1s;
+                //     animation-timing-function: ease-in-out;
+                //     animation-iteration-count: infinite;
+                // }
+                
+                
                 
                 @include tablet {
                     font-size: 18px;
@@ -150,7 +161,7 @@
 
 
             .mainc {
-                color: $main-color;
+                color: black;
             }
     
             .gold {
@@ -170,6 +181,15 @@
                 }
             }
 
+            h5 {
+                color: $main-color;
+                font-weight: 500;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
             .matchInfo {
                 font-size: 12px;
                 font-weight: 600;
@@ -181,7 +201,7 @@
                 }
 
                 &.timer {
-                    color: red;
+                    color: $secondary_color_shade;
 
                     span {
                         color: $main-color;
@@ -193,7 +213,7 @@
                         // border-bottom-width: 1px;
                         // border-bottom-color: #000;
                         // border-bottom-style: solid;
-                        background-image: linear-gradient(to right, white 30%, red 100%);
+                        background-image: linear-gradient(to right, white 30%, $secondary_color_shade 100%);
                         background-size: 200% auto;
                         // border-bottom-right-radius: 70%;
                         // border-top-right-radius: 70%;
@@ -204,23 +224,82 @@
                 }
 
             }
+
+            
             
             .oddsButtons {
                 display: flex;
                 justify-content: space-between;
-                gap: 20px;
+                gap: 5px;
 
-                button {
-                    outline: none;
-                    border: none;
-                    font-size: 12px;
-                    cursor: pointer;
-                    font-weight: 600;
-                    background-color: linear-gradient(45deg, rgba(#e4e4e4, 0.5),  transparent);
-                    color: gray;
-                    border-radius: 5px;
-                    padding: 5px 7px;
+                .switchItem {
+                    position: relative;
+    
+
+                    input {
+                        position: absolute !important;
+                        height: 100%;
+                        width: 100%;
+                        z-index: 2;
+                        opacity: 0;
+                        cursor: pointer;
+        
+        
+                        &:checked + label {
+                            // background-color: $main-color;
+                            color: $secondary_color_shade;
+                            box-shadow: none;
+                        }
+                    }
+                    
+                    label {
+                        transition: all 0.1s ease-in-out;
+                        cursor: pointer;
+                        display: grid;
+                        border: 1px solid #f7f7f7;
+                        place-items: center;
+                        background: linear-gradient(45deg, rgba(#e4e4e4, 0.5),  transparent);
+                        box-shadow: 1px 3px 3px #d4d4d4;
+                        // border-radius: 5px;
+                        font-size: 12px;
+                        // backdrop-filter: blur(5px);
+                        font-weight: 600;
+                        padding: 6px 14px;
+
+                    }
+
+
+                    &:nth-child(1) {
+
+                        label {
+                            border-start-start-radius: 40%;
+                            border-end-start-radius: 40%;
+
+                        }
+                    }
+                    
+                    
+                    &:nth-child(2) {
+
+                        label {
+                            border-radius: 5px;
+
+                        }
+                    }
+                    
+                    
+                    &:nth-child(3) {
+
+                        label {
+                            border-end-end-radius: 40%;
+                            border-start-end-radius: 40%;
+
+                        }
+                    }
+
+
                 }
+
             }
         }
     }
@@ -236,7 +315,7 @@
             outline: none;
             border: none;
             position: absolute;
-            bottom: -65px;
+            bottom: -61px;
             font-size: 14px;
             font-weight: 600;
             background-color: $main-color;

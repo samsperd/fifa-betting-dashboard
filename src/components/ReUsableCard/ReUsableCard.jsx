@@ -1,9 +1,9 @@
 import React from 'react'
 import './reusablecard.scss'
 
-const ReUsableCard = ({ title, children}) => {
+const ReUsableCard = ({ title, children, className}) => {
   return (
-    <div className='reusableCard'>
+    <div className={`reusableCard ${className}`}>
       {
         title && (
           <div className="reusableCardTitle">
