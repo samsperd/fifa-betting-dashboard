@@ -204,7 +204,7 @@
                     color: $secondary_color_shade;
 
                     span {
-                        color: $main-color;
+                        color: red;
                     }
 
                     &::after {
@@ -246,7 +246,7 @@
         
         
                         &:checked + label {
-                            // background-color: $main-color;
+                            background-color: gray;
                             color: $secondary_color_shade;
                             box-shadow: none;
                         }
@@ -258,7 +258,7 @@
                         display: grid;
                         border: 1px solid #f7f7f7;
                         place-items: center;
-                        background: linear-gradient(45deg, rgba(#e4e4e4, 0.5),  transparent);
+                        background: linear-gradient(45deg, rgba(#dddddd, 0.5),  white);
                         box-shadow: 1px 3px 3px #d4d4d4;
                         // border-radius: 5px;
                         font-size: 12px;
@@ -338,7 +338,7 @@
         @include tablet {
             position: none;
             align-items: center;
-            margin-top: 5px;
+            margin-top: 8px;
 
             button {
                 margin-bottom: 10px;

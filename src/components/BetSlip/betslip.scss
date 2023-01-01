@@ -10,7 +10,7 @@
         right: 0;
         left: 0;
         bottom: 0;
-        background: rgba($color: #000000, $alpha: 0.2);
+        background: rgba($color: #000000, $alpha: 0.5);
         // display: grid;
         z-index: 999;
         place-items: center;
@@ -49,6 +49,7 @@
             justify-content: space-around;
     
             .css-1q2h7u5.Mui-selected,
+            .Mui-selected,
             .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
                 color: $main-color !important;
             }
@@ -245,14 +246,15 @@
 
     @include tablet {
         position: fixed;
-        bottom: 10%;
+        bottom: 15%;
         right: 0;
-        background-color: rgba($color: #ffffff, $alpha: 0.7);
+        background-color: rgba($color: #ffffff, $alpha: 0.8);
         display: grid;
         place-items: center;
         padding: 5px;
         font-size: small;
         z-index: 999;
+        font-weight: 500;
         
         .betCount {
             background-color: $main-color;
