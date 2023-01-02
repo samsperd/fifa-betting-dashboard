@@ -131,7 +131,7 @@ const BetSlip = () => {
                                                             Stake
                                                         </div>
                                                         <div className="body">
-                                                            <input type="number" onChange={handleStake} value={stake} />
+                                                            <input type="tel" onChange={handleStake} value={stake} />
                                                         </div>
                                                         
                                                     </div>
