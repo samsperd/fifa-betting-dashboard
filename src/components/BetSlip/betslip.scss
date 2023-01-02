@@ -246,30 +246,35 @@
     display: none;
     cursor: pointer;
     box-shadow: 0 8px 13px rgba(0,0,0,.1);
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    font-size: small;
+    z-index: 999;
+    font-weight: 500;
 
-    @include tablet {
-        position: fixed;
-        bottom: 15%;
-        right: 0;
-        background-color: rgba($color: #ffffff, $alpha: 0.8);
-        display: grid;
-        place-items: center;
-        padding: 7px;
-        font-size: small;
-        z-index: 999;
-        font-weight: 500;
         
-        .betCount {
-            background-color: $main-color;
-            color: $secondary_color;
-            display: grid;
-            font-size: medium;
-            place-items: center;
-            border-radius: 50%;
-            font-weight: 600;
-            width: 25px;
-            height: 25px;
-            // padding: 5px;
-        }
+    .betCount {
+        background-color: $main-color;
+        color: $secondary_color;
+        display: grid;
+        font-size: medium;
+        place-items: center;
+        border-radius: 50%;
+        font-weight: 600;
+        width: 25px;
+        height: 25px;
+        // padding: 5px;
+    }
+
+
+    
+    @include tablet {
+        right: 0;
+        bottom: 15%;
     }
 }

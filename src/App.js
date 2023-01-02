@@ -1,3 +1,4 @@
+import { Link } from "@mui/material";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
@@ -33,6 +34,13 @@ function App() {
           </Routes>
         </div>
         <div className="footer">
+
+        <p>
+            Contact Me: <Link href="http://linkedin.com/in/obinna-iloeje-15183a202" target="_blank" rel="noopener noreferrer"> LinkedIn </Link>
+            <Link href="http://github.com/samsperd" target="_blank" rel="noopener noreferrer"> Github </Link>
+            <Link href="http://twitter.com/samsperd" target="_blank" rel="noopener noreferrer"> Twitter </Link>
+          </p>
+          <hr />
           <p>
             Thanks to  <a href="https://rapidapi.com/fluis.lacasse/api/footapi7" target="_blank" rel="noopener noreferrer"> FootAPI </a> for making this project possible
 

@@ -38,13 +38,25 @@
 
     .footer {
       margin-top: 20px;
-      height: 70px;
+      // height: 70px;
       background-color: rgb(218, 218, 218);
       color: gray;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: grid;
+      place-items: center;
       padding: 5px;
+      hr {
+        width: 100%;
+      }
+
+      p {
+        padding: 10px;
+        text-align: center;
+
+        &:nth-child(1) {
+          display: flex;
+          gap: 10px;
+        }
+      }
   }
 
     

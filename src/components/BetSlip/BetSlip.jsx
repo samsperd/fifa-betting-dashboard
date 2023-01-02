@@ -18,6 +18,9 @@ const BetSlip = () => {
 
     const [toggleSlip, setToggleSlip] = useState(false)
 
+    const [screenSize, setScreenSize] = useState(null)
+
+
     const bets = useSelector(state => state.betslip.bets)
 
     const totalOdds = useSelector(state => state.betslip.totalOdds)
@@ -38,6 +41,17 @@ const BetSlip = () => {
     
       
     }, [bets.length])
+
+    useEffect(() => {
+      
+        const handleResize = () => setScreenSize(window.innerWidth)
+        window.addEventListener('resize', handleResize)
+        handleResize()
+
+        return () => window.removeEventListener('resize', handleResize)
+
+    }, [])
+
     
     const handleChange = (event, newValue) => {
       setValue(newValue);
@@ -50,12 +64,24 @@ const BetSlip = () => {
     const handleRemove = (id) => {
         dispatch(removeBet(id))
     }
+
+    const handleToggleSlip = () => {
+
+        
+        if (screenSize > 1024) {
+            const betslips = document.getElementById("betslips")
+            betslips.scrollIntoView({ behavior: 'smooth'})
+        } else {
+            setToggleSlip(!toggleSlip)
+        }
+        
+    }
     
     
     
     return (
         <>
-            <div className={`toggleQueries ${ toggleSlip ? 'open' : undefined }`}>
+            <div className={`toggleQueries ${ toggleSlip ? 'open' : undefined }`} id="betslips">
                 <ReUsableCard className={'toggleCard'}>
                     <div className="bettingSlip">
                         <div className='goDown' onClick={() => setToggleSlip(!toggleSlip)}>
@@ -179,7 +205,7 @@ const BetSlip = () => {
             
             {
                 !toggleSlip && (
-                    <span className="floatingButton" onClick={() => setToggleSlip(!toggleSlip)}>
+                    <span className="floatingButton" onClick={handleToggleSlip}>
                         <span className="betCount">
                             { bets.length }
                         </span>
