@@ -224,7 +224,12 @@ const data =
         },
         "statusTime": null,
         "startTimestamp": 1671289200,
-        "roundInfo": null,
+        "roundInfo": {
+            "round": 1,
+            "name": "Third Place Play-Off",
+            "cupRoundType": 1,
+            "slug": "third-place-play-off"
+        },
         "coverage": null,
         "awayScore": {
             "extra2": null,

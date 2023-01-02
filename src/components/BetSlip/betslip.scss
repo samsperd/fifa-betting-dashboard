@@ -21,7 +21,7 @@
     }
 
     .toggleCard{
-        width: 100%;
+        width: 95%;
     }
 
 
@@ -34,7 +34,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 20px;
+                height: 30px;
                 cursor: pointer;
 
             }
@@ -45,12 +45,14 @@
         }
     
     
-        .css-heg063-MuiTabs-flexContainer {
+        .css-heg063-MuiTabs-flexContainer,
+        .MuiTabs-flexContainer {
             justify-content: space-around;
     
             .css-1q2h7u5.Mui-selected,
             .Mui-selected,
-            .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+            .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected,
+            .MuiTab-textColorPrimary {
                 color: $main-color !important;
             }
     
@@ -243,6 +245,7 @@
 .floatingButton {
     display: none;
     cursor: pointer;
+    box-shadow: 0 8px 13px rgba(0,0,0,.1);
 
     @include tablet {
         position: fixed;

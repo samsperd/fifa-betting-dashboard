@@ -246,7 +246,7 @@
         
         
                         &:checked + label {
-                            background-color: gray;
+                            background: rgb(150, 150, 150);
                             color: $secondary_color_shade;
                             box-shadow: none;
                         }

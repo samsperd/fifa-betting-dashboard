@@ -136,10 +136,6 @@ const Card = () => {
     
     }
 
-    console.log('====================================');
-    console.log(selectedBet);
-    console.log('====================================');
-
     
     return (
         <form onSubmit={handleSumbit} className='card'>

@@ -64,7 +64,7 @@ const BetSlip = () => {
                         <Box sx={{ width: '100%', typography: 'body1' }}>
                             <TabContext value={value}>
                                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                                <TabList onChange={handleChange} aria-label="lab API tabs example">
+                                <TabList onChange={handleChange} className='timtim' aria-label="lab API tabs example">
 
                                 {
                                     bets.length > 0 && (
