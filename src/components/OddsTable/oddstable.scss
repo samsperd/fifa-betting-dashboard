@@ -10,7 +10,7 @@
         padding: 10px;
         width: fit-content;
         place-items: center;
-        background:  linear-gradient(45deg, transparent,  white);
+        background:  linear-gradient(45deg, $background-color,  white);
         // box-shadow: 3px 3px 3px #dfdfdf;
         border-radius: 5px;
         margin-bottom: 4px;
@@ -75,7 +75,7 @@
 
 
                 &:checked + label {
-                    background-color: $main-color;
+                    background:  linear-gradient(45deg, rgb(154, 0, 185, 1) 0%,  rgb(130, 4, 155, 1) 35%,   rgb(85, 0, 101, 1) 100%,);
                     color: gold;
                     box-shadow: none;
                 }
@@ -86,7 +86,7 @@
                 cursor: pointer;
                 display: grid;
                 place-items: center;
-                background: linear-gradient(45deg, rgba(#e4e4e4, 0.5),  transparent);
+                background: linear-gradient(45deg, rgba(#e4e4e4, 1),  $background-color);
                 box-shadow: 3px 3px 3px #d4d4d4;
                 border-radius: 5px;
                 font-size: 16px;

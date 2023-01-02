@@ -49,10 +49,10 @@
         .MuiTabs-flexContainer {
             justify-content: space-around;
     
-            .css-1q2h7u5.Mui-selected,
-            .Mui-selected,
-            .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected,
-            .MuiTab-textColorPrimary {
+            // .css-1q2h7u5.Mui-selected,
+            // .Mui-selected,
+            // .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected,
+            .MuiTab-textColorPrimary.Mui-selected {
                 color: $main-color !important;
             }
     
@@ -254,7 +254,7 @@
         background-color: rgba($color: #ffffff, $alpha: 0.8);
         display: grid;
         place-items: center;
-        padding: 5px;
+        padding: 7px;
         font-size: small;
         z-index: 999;
         font-weight: 500;

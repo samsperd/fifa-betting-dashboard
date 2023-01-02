@@ -246,7 +246,7 @@
         
         
                         &:checked + label {
-                            // background: rgb(150, 150, 150);
+                            background: $main-color;
                             color: $secondary_color_shade;
                             box-shadow: none;
                         }
@@ -258,8 +258,9 @@
                         display: grid;
                         border: 1px solid #f7f7f7;
                         place-items: center;
-                        background: linear-gradient(45deg, rgba(#dddddd, 0.5),  white);
+                        background: rgba(#e4e4e4, 0.5);
                         box-shadow: 1px 3px 3px #d4d4d4;
+                        // color: gray;
                         // border-radius: 5px;
                         font-size: 12px;
                         // backdrop-filter: blur(5px);
@@ -338,10 +339,10 @@
         @include tablet {
             position: none;
             align-items: center;
-            margin-top: 8px;
+            margin-top: 10px;
+            margin-bottom: 10px;
 
             button {
-                margin-bottom: 10px;
                 position: relative;
                 bottom: 0;
 
