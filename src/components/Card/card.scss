@@ -335,6 +335,10 @@
                 animation-iteration-count: 1;
             }
 
+            &:disabled {
+                background-color: rgba($secondary_color_shade, 0.5);
+            }
+
         }
         @include tablet {
             position: none;
