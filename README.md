@@ -10,9 +10,9 @@ This project was made with data from [FootApi](https://rapidapi.com/fluis.lacass
 
 [SASS](https://www.npmjs.com/package/sass)
 
-[Material UI Icons](https://mui.com/material-ui/materi-icons/)
+[Material UI Icons](https://mui.com/material-ui/icons)
 
-[React Router Dom V6](https://mui.com/material-ui/materi-icons/)
+React Router Dom V6
 
 ## Available Scripts
 

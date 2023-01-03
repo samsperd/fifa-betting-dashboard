@@ -201,11 +201,11 @@
                 }
 
                 &.timer {
-                    color: $secondary_color_shade;
+                    color: lightgray;
 
-                    span {
-                        color: red;
-                    }
+                    // span {
+                    //     color: red;
+                    // }
 
                     &::after {
                         content: "";
@@ -213,7 +213,7 @@
                         // border-bottom-width: 1px;
                         // border-bottom-color: #000;
                         // border-bottom-style: solid;
-                        background-image: linear-gradient(to right, white 30%, red 100%);
+                        background-image: linear-gradient(to right, white 30%, $secondary_color_shade 100%);
                         background-size: 200% auto;
                         // border-bottom-right-radius: 70%;
                         // border-top-right-radius: 70%;
