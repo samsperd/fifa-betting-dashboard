@@ -1,7 +1,7 @@
 import React from 'react'
 import "./navbar.scss"
 import face from '../../assets/images/face-5.jpeg'
-import { AccountBalance, AccountBox, DarkMode, FiberManualRecord, LightMode, Logout, Notifications, Receipt, Savings, SearchOutlined, SortOutlined } from '@mui/icons-material'
+import { AccountBalance, AccountBox, DarkMode, FiberManualRecord, KeyboardArrowDown, LightMode, Logout, Notifications, Receipt, Savings, SearchOutlined, SortOutlined } from '@mui/icons-material'
 import { useState } from 'react'
 import { Button } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
@@ -82,7 +82,7 @@ const Navbar = ({ toggleNav }) => {
                     </span>
                     <span className='dets' onClick={() => setDisplayProfile(!displayProfile)} >
                         <h4>Obinna Iloeje</h4>
-                        <p>$5,000</p>
+                        <p>$5,000 <KeyboardArrowDown style={{ color: '#aaa'}} fontSize='small' /> </p>
                     </span>
                 </div>
 

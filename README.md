@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# FIFA WORLD CUP 2022 BETTING DASHBOARD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made with data from [FootApi](https://rapidapi.com/fluis.lacasse/api/footapi7).
+
+## Major Packages Used
+
+[Create React App](https://github.com/facebook/create-react-app).
+
+[Redux ToolKit](https://redux-toolkit.js.org)
+
+[SASS](https://www.npmjs.com/package/sass)
+
+[Material UI Icons](https://mui.com/material-ui/materi-icons/)
+
+[React Router Dom V6](https://mui.com/material-ui/materi-icons/)
 
 ## Available Scripts
 
@@ -45,26 +57,3 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

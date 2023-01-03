@@ -178,6 +178,14 @@
 
                     h4 {
                         font-size: 14px;
+                        color: gray;
+                    }
+
+                    p {
+                        letter-spacing: 1px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
                     }
                 }
             }
@@ -222,6 +230,7 @@
                             
                             &:nth-child(2) {
                             color: rgb(0, 148, 0);
+                            letter-spacing: 1px;
                         }}
                     }
                 }
