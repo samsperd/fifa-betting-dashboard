@@ -127,6 +127,7 @@ const Card = () => {
             return;
         } else {
             setIsLoading(true)
+            setTimeout(() => setIsLoading(false), 1000);
 
             const obj = {
                 target: {
@@ -137,7 +138,6 @@ const Card = () => {
 
             dispatch(addBet(obj))
 
-            setTimeout(() => setIsLoading(false), 3000);
         }
         
     
