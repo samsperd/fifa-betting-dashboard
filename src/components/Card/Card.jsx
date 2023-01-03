@@ -67,10 +67,11 @@ function convertObjectToString(choiceId, choiceOdd, eventId, choiceName, marketN
 
 const Card = () => {
 
+    const dispatch = useDispatch()
     const [isLive, setIsLive] = useState(true)
     const [starBG, setStarBG] = useState(false)
     const [ftChoice, setFtChoice] = useState('')
-    const dispatch = useDispatch()
+    const [isLoading, setIsLoading] = useState(true)
 
 
     const matchId = useSelector(state => state.matchId.matchId);
@@ -121,9 +122,11 @@ const Card = () => {
     const handleSumbit = (e) => {
         e.preventDefault();
 
+        
         if (ftChoice === '') {
             return;
         } else {
+            setIsLoading(true)
             const obj = {
                 target: {
                     value: JSON.stringify(ftChoice),
@@ -132,7 +135,12 @@ const Card = () => {
             }
 
             dispatch(addBet(obj))
+            
+            setTimeout(() => {
+                setIsLoading(false)
+            }, 3000);
         }
+        
     
     }
 
@@ -252,8 +260,10 @@ const Card = () => {
                 </div>
             </div>
             <div className="cardActions">
-                <button type='submit'>
-                    Place a Bet
+                <button type='submit' disabled={isLoading}>
+                        {
+                            isLoading ? 'Loading...' : 'Place a Bet'
+                        }
                 </button>
             </div>
         </form>
