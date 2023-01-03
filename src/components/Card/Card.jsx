@@ -71,7 +71,7 @@ const Card = () => {
     const [isLive, setIsLive] = useState(true)
     const [starBG, setStarBG] = useState(false)
     const [ftChoice, setFtChoice] = useState('')
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
 
 
     const matchId = useSelector(state => state.matchId.matchId);
@@ -127,6 +127,7 @@ const Card = () => {
             return;
         } else {
             setIsLoading(true)
+
             const obj = {
                 target: {
                     value: JSON.stringify(ftChoice),
@@ -135,10 +136,8 @@ const Card = () => {
             }
 
             dispatch(addBet(obj))
-            
-            setTimeout(() => {
-                setIsLoading(false)
-            }, 3000);
+
+            setTimeout(() => setIsLoading(false), 3000);
         }
         
     
