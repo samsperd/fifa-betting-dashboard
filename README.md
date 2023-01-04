@@ -18,5 +18,6 @@ React Router Dom V6
 
 ## Give me a Star
 
-Don't just clone or visit the repo, GIVE ME A STAR🌟
+Don't just clone or visit the repo, LEAVE ME A STAR🌟
 
+<img src="https://t.bkit.co/w_63b515d08dbce.gif" />
